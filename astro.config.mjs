@@ -3,7 +3,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
+  integrations: [
 		starlight({
 			title: 'DiceDB',
       favicon: '/favicon.png',
