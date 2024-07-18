@@ -1,0 +1,26 @@
+---
+title: Installation
+description: 'Steps to install DiceDB and get started with it.'
+---
+
+The easiest way to get started with DiceDB is using [Docker](https://www.docker.com/) by running the following command.
+
+```
+$ docker run dicedb/dice-server
+```
+
+The above command will start the DiceDB server running locally on the port `7379` and you can connect
+to it using DiceDB CLI and SDKs.
+
+> Note: Given it is a drop-in replacement of Redis, you can also use any Redis CLI and SDK to connect to DiceDB.
+
+## Setup CLI
+
+The best way to connect to DiceDB is using DiceDB CLI and you can install it by running the following command.
+
+```
+$ pip install dicedb-cli
+```
+
+> Because DiceDB speaks Redis dialect, you can connect to it with any Redis Client and SDK also.
+> But if you are planning to use the `QWATCH` feature then you need to use the DiceDB CLI.
