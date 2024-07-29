@@ -52,14 +52,14 @@ Let's start by ingesting some sample data into DiceDB. We'll use the `SET` comma
 Once the CLI connects to the database, fire the following commands to ingest player scores.
 
 ```
-SET aquaman 5
-SET batman 7
-SET cyclops 2
-SET deadpool 9
+JSON.SET match:1:player:1 $ {"name": "aquaman", "score": 5}
+JSON.SET match:1:player:2 $ {"name": "batman", "score": 5}
+JSON.SET match:1:player:3 $ {"name": "cyclops", "score": 2}
+JSON.SET match:1:player:4 $ {"name": "deadpool", "score": 9}
 ```
 
-Note: If you were using REdis, then you'd need to use Sorted Set to build the leaderboard
-but with DiceDB, you can use the `SET` command to store the score against the player as a top-level key, value pair.
+Note: If you were using Redis, then you'd need to use Sorted Set to build the leaderboard
+but with DiceDB, you can use the `JSON.SET` command to store the metadata and score against the player as a top-level key, value pair.
 
 ## Querying the data
 
@@ -67,7 +67,7 @@ Open another terminal window, connect to the DiceDB with CLI.
 To get the leaderboard, you need to simply query the DiceDB using the `QWATCH` command.
 
 ```
-QWATCH "SELECT $key, $value ORDER BY $value DESC"
+QWATCH "SELECT $key, $value FROM 'match_1:%' ORDER BY $value.score DESC"
 ```
 
 This command will keep emitting the list of key, value pairs in the descending order of the value (score).
@@ -75,13 +75,12 @@ This command will keep emitting the list of key, value pairs in the descending o
 ## Updating Player Scores
 
 As players complete games, you'll need to update their scores.
-Use the `SET` command again to update the score of the player and set it to the new value.
-Note: You can also use `INCR` command to increment the score of the player.
+Use the `JSON.SET` command again to update the score of the player and set it to the new value.
 
 Say, we increase the score of `cyclops` to a `10`, then the command would be
 
 ```
-SET cyclops 10
+JSON.SET match:1:player:3 $.score 10
 ```
 
 ## Realtime Leaderboard
