@@ -48,7 +48,7 @@ To test that the connection is well established fire the `PING` command and you 
 
 ## Ingesting the stats
 
-Let's start by ingesting some sample data into DiceDB. We'll use the `SET` command to store player scores.
+Let's start by ingesting some sample data into DiceDB. We'll use the [`JSON.SET`](/commands/jsonset) command to store player scores.
 Once the CLI connects to the database, fire the following commands to ingest player scores.
 
 ```
@@ -59,7 +59,7 @@ JSON.SET match:1:player:4 $ {"name": "deadpool", "score": 9}
 ```
 
 Note: If you were using Redis, then you'd need to use Sorted Set to build the leaderboard
-but with DiceDB, you can use the `JSON.SET` command to store the metadata and score against the player as a top-level key, value pair.
+but with DiceDB, you can use the [`JSON.SET`](/commands/jsonset) command to store the metadata and score against the player as a top-level key, value pair.
 
 ## Querying the data
 
@@ -75,7 +75,7 @@ This command will keep emitting the list of key, value pairs in the descending o
 ## Updating Player Scores
 
 As players complete games, you'll need to update their scores.
-Use the `JSON.SET` command again to update the score of the player and set it to the new value.
+Use the [`JSON.SET`](/commands/jsonset) command again to update the score of the player and set it to the new value.
 
 Say, we increase the score of `cyclops` to a `10`, then the command would be
 

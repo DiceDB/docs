@@ -22,6 +22,10 @@ export default defineConfig({
 					label: 'Tutorials',
 					autogenerate: { directory: 'tutorials' }
 				},
+        {
+					label: 'Commands',
+					autogenerate: { directory: 'commands' }
+				},
 			],
 		}),
 	],
