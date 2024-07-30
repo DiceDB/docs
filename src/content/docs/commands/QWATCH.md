@@ -4,7 +4,7 @@ description: The `QWATCH` command is a novel feature designed to provide real-ti
 
 ---
 
-The `QWATCH` command is a novel feature designed to provide real-time updates to clients based on changes in underlying data. It operates similarly to the `SUBSCRIBE` command but focuses on SQL-like queries over Redis data structures. Whenever data modifications affect the query's results, the updated result set is pushed to the subscribed client. This eliminates the need for clients to constantly poll for changes.
+The `QWATCH` command is a novel feature designed to provide real-time updates to clients based on changes in underlying data. It operates similarly to the `SUBSCRIBE` command but focuses on SQL-like queries over data structures. Whenever data modifications affect the query's results, the updated result set is pushed to the subscribed client. This eliminates the need for clients to constantly poll for changes.
 
 This command is what makes [DiceDB](https://github.com/dicedb/dice) different from [Redis](https://redis.io/) and
 is what uniquely positions it to be the easiest and the most intuitive way to build
@@ -34,7 +34,7 @@ QWATCH dsql-query
 1. `Query Parsing`: The provided query is parsed to extract the SELECT, FROM, WHERE, and ORDER BY clauses.
 2. `Subscription Establishment`: The client establishes a subscription to the specified query.
 3. `Initial Result`: The initial result set based on the current data is sent to the client.
-4. `Data Change Monitoring`: Redis continuously monitors the data sources specified in the FROM clause.
+4. `Data Change Monitoring`: DiceDB continuously monitors the data sources specified in the FROM clause.
 5. `Query Reevaluation`: Whenever data changes that might affect the query result, the query is reevaluated.
 6. `Result Push`: If the reevaluated result differs from the previous result, the new result set is pushed to the subscribed client.
 

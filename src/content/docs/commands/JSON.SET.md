@@ -52,7 +52,6 @@ JSON.SET avengers:1 $.address.city "New York"
 This command adds a nested object `address` with a property `city` set to "New York" within the existing `avengers:1`.
 
 ### Error Handling
-* `ERR unknown command`: If RedisJSON module is not loaded.
 * `ERR invalid JSON`: If the provided `value` is not valid JSON.
 * `ERR syntax error`: If the `path` is malformed.
 * `ERR path not found`: If the specified path doesn't exist and cannot be created.
