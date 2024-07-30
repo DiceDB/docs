@@ -64,7 +64,7 @@ but with DiceDB, you can use the [`JSON.SET`](/commands/jsonset) command to stor
 ## Querying the data
 
 Open another terminal window, connect to the DiceDB with CLI.
-To get the leaderboard, you need to simply query the DiceDB using the `QWATCH` command.
+To get the leaderboard, you need to simply query the DiceDB using the [`QWATCH`](/commands/qwatch) command.
 
 ```
 QWATCH "SELECT $key, $value FROM 'match_1:%' ORDER BY $value.score DESC"
@@ -85,7 +85,7 @@ JSON.SET match:1:player:3 $.score 10
 
 ## Realtime Leaderboard
 
-Given that we have used `QWATCH` command to get the leaderboard,
+Given that we have used [`QWATCH`](/commands/qwatch) command to get the leaderboard,
 any time the data is updated, it will re-evaluate the query and
 emitting the list of key, value pairs in the descending order of the value (score).
 
