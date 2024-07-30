@@ -3,7 +3,7 @@ title: JSON.SET Command
 description: JSON.SET Command
 ---
 
-The `JSON.SET` command enables you to store or modify JSON values and attributes within a DiceDB key.
+The `JSON.SET` command enables you to create or modify JSON values within a specified key. This command offers granular control over JSON data structures, allowing for intricate manipulations.
 
 ### Syntax
 
@@ -11,16 +11,21 @@ The `JSON.SET` command enables you to store or modify JSON values and attributes
 JSON.SET key path value
 ```
 
-* **key**: The name of the key to which the JSON value will be associated.
-* **path**: JSONPath expression specifying the location within the document where the value should be set.
-* **value**: The JSON value to be stored at the specified path.
+* `key`: The name of the key to which the JSON value will be associated.
+* `path`: JSONPath expression specifying the location within the document.
+* `value`: The JSON value to be stored at the specified path.
+
+### Return Value
+
+* `OK`: if the operation is successful.
 
 ### Behavior
+1. If the specified `key` doesn't exist, a new key is created.
+2. The `path` is interpreted as a JSONPath expression to pinpoint the exact location within the JSON document.
+3. The provided `value` is assigned to the determined path.
+   * If the path doesn't exist, it's created.
+   * If the path already exists, its value is overwritten.
 
-1. If the specified `key` does not exist, a new key is created.
-2. The `path` argument is parsed as a JSONPath expression to determine the target location within the JSON document.
-3. If the path does not exist, it is created.
-4. If the path already exists, its value is overwritten.
 
 ### JSONPath Support
 
@@ -32,8 +37,6 @@ JSON.SET key path value
   * `[]`: Accesses array elements.
 
 ### Examples
-
-#### Basic Usage
 
 ```
 JSON.SET avengers:1 $.name "Tony Stark"
@@ -48,6 +51,10 @@ JSON.SET avengers:1 $.address.city "New York"
 This command adds a nested object `address` with a property `city` set to "New York" within the existing `avengers:1`.
 
 ### Error Handling
-
-* If the `key` or `path` is invalid, a syntax error is returned.
-* If the `value` is not valid JSON, a type error is returned.
+* `ERR unknown command`: If RedisJSON module is not loaded.
+* `ERR invalid JSON`: If the provided `value` is not valid JSON.
+* `ERR syntax error`: If the `path` is malformed.
+* `ERR path not found`: If the specified path doesn't exist and cannot be created.
+* `ERR object expected`: If a path element expects an object but encounters a different type.
+* `ERR array index out of range`: If an array index in the path is out of bounds.
+* `(nil) reply`: If the `NX` or `XX` condition is not met.
