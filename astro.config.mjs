@@ -26,6 +26,12 @@ export default defineConfig({
 					label: 'Commands',
 					autogenerate: { directory: 'commands' }
 				},
+        {
+          label: 'Metrics',
+          items: [
+            { label: 'Memtier Benchmark', link: 'https://dicedb-docs.netlify.app/metrics/memtier.html', attrs: { target: '_blank' }, },
+          ],
+        },
 			],
 		}),
 	],
