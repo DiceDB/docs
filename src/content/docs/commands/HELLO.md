@@ -1,6 +1,6 @@
 ---
 title: HELLO
-description: Documentation for the Redis command HELLO
+description: The `HELLO` command in DiceDB is used to initiate a connection handshake with the server. This command is particularly useful for clients to negotiate the protocol version and authentication details. It can also be used to switch the connection to a different protocol version.
 ---
 
 The `HELLO` command in DiceDB is used to initiate a connection handshake with the server. This command is particularly useful for clients to negotiate the protocol version and authentication details. It can also be used to switch the connection to a different protocol version.
