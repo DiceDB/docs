@@ -1,5 +1,5 @@
 ---
-title: "PING"
+title: PING
 description: The `PING` command in DiceDB is used to test the connection between the client and the DiceDB server. It's a crucial command for ensuring that the DiceDB server is reachable and functional. It is often utilized to check the health of the server and ensure that it is responsive.
 ---
 
@@ -33,15 +33,15 @@ The return value varies based on the presence of the optional `[message]` parame
 
 ### Example 1: Pinging the server without a message
 
-```sh
-> PING
+```bash
+127.0.0.1:7379> PING
 PONG
 ```
 
 ### Example 2: Pinging the server with a message
 
-```sh
-> PING "Hello, DiceDB!"
+```bash
+127.0.0.1:7379>  PING "Hello, DiceDB!"
 "Hello, DiceDB!"
 ```
 
@@ -63,7 +63,7 @@ This helps clients determine if the server is up and responsive. Essentially, it
    - `Error message`: `(error) ERR wrong number of arguments for 'ping' command`
    - `Scenario`: If more than one argument is provided.
 
-   ```sh
+   ```bash
    > PING "Message 1" "Message 2"
    (error) ERR wrong number of arguments for 'ping' command
    ```

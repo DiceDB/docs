@@ -26,7 +26,7 @@ QWATCH dsql-query
 
 ## Query Syntax
 
-```
+```sql
 SELECT $key, $value  FROM 'key_pattern'
 WHERE condition
 ORDER BY field [ASC | DESC] LIMIT n
@@ -65,8 +65,8 @@ Let's explore a practical example of using the `QWATCH` command to create a real
 
 ### Query
 
-```
-QWATCH "SELECT $key, $value FROM `match:100:*` WHERE $value > 10 ORDER BY $value DESC LIMIT 3"
+```bash
+127.0.0.1:7379> QWATCH "SELECT $key, $value FROM `match:100:*` WHERE $value > 10 ORDER BY $value DESC LIMIT 3"
 ```
 
 This query does the following:
@@ -86,38 +86,38 @@ that the response will be RESP encoded and parsing will be handled by the SDK th
    QWATCH response: `[] (empty array)`
 
 2. Player 0 scores 5 points:
-   ```
-   SET match:100:user:0 5
+   ```bash
+   127.0.0.1:7379> SET match:100:user:0 5
    ```
    QWATCH response: `[] (no change, score <= 10)`
 
 3. Player 1 scores 15 points:
-   ```
-   SET match:100:user:1 15
+   ```bash
+   127.0.0.1:7379> SET match:100:user:1 15
    ```
    QWATCH response: `[["match:100:user:1", "15"]]`
 
 4. Player 2 scores 20 points:
-   ```
-   SET match:100:user:2 20
+   ```bash
+   127.0.0.1:7379> SET match:100:user:2 20
    ```
    QWATCH response: `[["match:100:user:2", "20"], ["match:100:user:1", "15"]]`
 
 5. Player 3 scores 12 points:
-   ```
-   SET match:100:user:3 12
+   ```bash
+   127.0.0.1:7379> SET match:100:user:3 12
    ```
    QWATCH response: `[["match:100:user:2", "20"], ["match:100:user:1", "15"], ["match:100:user:3", "12"]]`
 
 6. Player 4 scores 25 points:
-   ```
-   SET match:100:user:4 25
+   ```bash
+   127.0.0.1:7379> SET match:100:user:4 25
    ```
    QWATCH response: `[["match:100:user:4", "25"], ["match:100:user:2", "20"], ["match:100:user:1", "15"]]`
 
 7. Player 0 improves their score to 30:
-   ```
-   SET match:100:user:0 30
+   ```bash
+   127.0.0.1:7379> SET match:100:user:0 30
    ```
    QWATCH response: `[["match:100:user:0", "30"], ["match:100:user:4", "25"], ["match:100:user:2", "20"]]`
 

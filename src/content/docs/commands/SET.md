@@ -1,5 +1,5 @@
 ---
-title: "SET"
+title: SET
 description: The `SET` command in DiceDB is used to set the value of a key. If the key already holds a value, it is overwritten, regardless of its type. This is one of the most fundamental operations in DiceDB as it allows for both creating and updating key-value pairs.
 ---
 
@@ -88,13 +88,8 @@ The command may raise errors in the following scenarios:
 
 Setting a key `foo` with the value `bar`:
 
-```
-SET foo bar
-```
-
-`Response`:
-
-```
+```bash
+127.0.0.1:7379> SET foo bar
 OK
 ```
 
@@ -102,13 +97,8 @@ OK
 
 Setting a key `foo` with the value `bar` to expire in 10 seconds:
 
-```
-SET foo bar EX 10
-```
-
-`Response`:
-
-```
+```bash
+127.0.0.1:7379> SET foo bar EX 10
 OK
 ```
 
@@ -116,13 +106,8 @@ OK
 
 Setting a key `foo` with the value `bar` to expire in 10000 milliseconds (10 seconds):
 
-```
-SET foo bar PX 10000
-```
-
-`Response`:
-
-```
+```bash
+127.0.0.1:7379> SET foo bar PX 10000
 OK
 ```
 
@@ -130,8 +115,8 @@ OK
 
 Setting a key `foo` only if it does not already exist:
 
-```
-SET foo bar NX
+```bash
+127.0.0.1:7379> SET foo bar NX
 ```
 
 `Response`:
@@ -143,8 +128,8 @@ SET foo bar NX
 
 Setting a key `foo` only if it exists:
 
-```
-SET foo bar XX
+```bash
+127.0.0.1:7379> SET foo bar XX
 ```
 
 `Response`:
@@ -156,13 +141,8 @@ SET foo bar XX
 
 Setting a key `foo` with a value `bar` and retaining existing TTL:
 
-```
-SET foo bar KEEPTTL
-```
-
-`Response`:
-
-```
+```bash
+127.0.0.1:7379> SET foo bar KEEPTTL
 OK
 ```
 
@@ -170,12 +150,7 @@ OK
 
 Trying to set key `foo` with both `EX` and `KEEPTTL` will result in an error:
 
-```
-SET foo bar EX 10 KEEPTTL
-```
-
-`Response`:
-
-```
+```bash
+127.0.0.1:7379> SET foo bar EX 10 KEEPTTL
 (error) ERR syntax error
 ```

@@ -8,7 +8,7 @@ if it does not then the command returns `nil`. This is one of the most fundament
 
 ## Synopsis
 
-```
+```bash
 GET key
 ```
 
@@ -44,51 +44,24 @@ Here are a few examples demonstrating the usage of the GET command:
 
 ### Example 1: Key Exists and Holds a String Value
 
-`Command:`
-
-```
-SET mykey "Hello, DiceDB!"
-```
-
-```
-GET mykey
-```
-
-`Response:`
-
-```
+```bash
+127.0.0.1:7379> SET mykey "Hello, DiceDB!"
+127.0.0.1:7379> GET mykey
 "Hello, DiceDB!"
 ```
 
 ### Example 2: Key Does Not Exist
 
-`Command:`
-
-```
-GET nonexistingkey
-```
-
-`Response:`
-
-```
+```bash
+127.0.0.1:7379> GET nonexistingkey
 (nil)
 ```
 
 ### Example 3: Key Exists but Holds a Non-string Value
 
-`Command:`
-
-```
-LPUSH mylist "item1"
-```
-
-```
-GET mylist
-```
-
-`Response:`
-
-```
+```bash
+127.0.0.1:7379> LPUSH mylist "item1"
+127.0.0.1:7379> GET mylist
 (error) WRONGTYPE Operation against a key holding the wrong kind of value
 ```
 

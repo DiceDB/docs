@@ -1,5 +1,5 @@
 ---
-title: "MSET"
+title: MSET
 description: The `MSET` command in DiceDB is used to set multiple key-value pairs in a single atomic operation. This command is particularly useful for reducing the number of round-trip times between the client and the server when you need to set multiple keys at once.
 ---
 
@@ -7,7 +7,7 @@ The `MSET` command in DiceDB is used to set multiple key-value pairs in a single
 
 ## Syntax
 
-```
+```plaintext
 MSET key1 value1 [key2 value2 ...]
 ```
 
@@ -27,12 +27,12 @@ When the `MSET` command is executed, DiceDB sets the specified keys to their res
 ## Error Handling
 
 - `Wrong number of arguments`: If the number of arguments is not even (i.e., there is a key without a corresponding value), DiceDB will return an error:
-  ```
-  ERR wrong number of arguments for 'mset' command
+  ```bash
+  (error) ERR wrong number of arguments for 'mset' command
   ```
 - `Non-string keys or values`: If any of the keys or values are not strings, DiceDB will return an error:
-  ```
-  ERR value is not a valid string
+  ```bash
+  (error) ERR value is not a valid string
   ```
 
 ## Example Usage
@@ -41,13 +41,8 @@ When the `MSET` command is executed, DiceDB sets the specified keys to their res
 
 To set multiple key-value pairs in DiceDB:
 
-```sh
-MSET key1 "value1" key2 "value2" key3 "value3"
-```
-
-`Response:`
-
-```
+```bash
+127.0.0.1:7379> MSET key1 "value1" key2 "value2" key3 "value3"
 OK
 ```
 
@@ -55,45 +50,14 @@ OK
 
 To set multiple key-value pairs and then retrieve them:
 
-```sh
-MSET name "Alice" age "30" city "Wonderland"
-```
-
-`Response:`
-
-```
+```bash
+127.0.0.1:7379> MSET name "Alice" age "30" city "Wonderland"
 OK
-```
-
-To retrieve the values:
-
-```sh
-GET name
-```
-
-`Response:`
-
-```
+127.0.0.1:7379> GET name
 "Alice"
-```
-
-```sh
-GET age
-```
-
-`Response:`
-
-```
+127.0.0.1:7379> GET age
 "30"
-```
-
-```sh
-GET city
-```
-
-`Response:`
-
-```
+127.0.0.1:7379> GET city
 "Wonderland"
 ```
 
@@ -102,13 +66,8 @@ GET city
 Attempting to set an odd number of arguments:
 
 ```sh
-MSET key1 "value1" key2
-```
-
-`Response:`
-
-```
-ERR wrong number of arguments for 'mset' command
+127.0.0.1:7379> MSET key1 "value1" key2
+(error) ERR wrong number of arguments for 'mset' command
 ```
 
 ## Notes

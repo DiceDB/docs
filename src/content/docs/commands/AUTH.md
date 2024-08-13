@@ -1,5 +1,5 @@
 ---
-title: "AUTH"
+title: AUTH
 description: The `AUTH` command is a DiceDB command that enables you to authenticate a client connecting to the DiceDB server using a password. This command is particularly important in environments where the DiceDB instance is secured with access control measures, ensuring that only authorized users can interact with the server and its data.
 ---
 
@@ -37,7 +37,7 @@ Once authenticated, the client can execute commands on the DiceDB server that re
 ### Successful Authentication
 
 ```bash
-127.0.0.1:6379> AUTH your_secret_password
+127.0.0.1:7379> AUTH your_secret_password
 OK
 ```
 
@@ -46,11 +46,11 @@ In this example, after successfully typing the correct password, the DiceDB serv
 ### Failed Authentication
 
 ```bash
-127.0.0.1:6379> AUTH incorrect_password
+127.0.0.1:7379> AUTH incorrect_password
 (error) ERR invalid password
 ```
 
-In this example, the provided password is incorrect. As a result, the DiceDB server responds with an error stating `ERR invalid password`, indicating that the authentication has failed.
+In this example, the provided password is incorrect. As a result, the DiceDB server responds with an error stating `(error) ERR invalid password`, indicating that the authentication has failed.
 
 ## Error Handling
 

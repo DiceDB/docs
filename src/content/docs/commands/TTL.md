@@ -35,15 +35,10 @@ The `TTL` command can raise errors in the following scenarios:
 
 ### Example 1: Key with Expiration
 
-```DiceDB
-SET mykey "Hello"
-EXPIRE mykey 10
-TTL mykey
-```
-
-`Output:`
-
-```
+```bash
+127.0.0.1:7379> SET mykey "Hello"
+127.0.0.1:7379> EXPIRE mykey 10
+127.0.0.1:7379> TTL mykey
 (integer) 10
 ```
 
@@ -51,14 +46,9 @@ In this example, the key `mykey` is set with a value of "Hello" and an expiratio
 
 ### Example 2: Key without Expiration
 
-```DiceDB
-SET mykey "Hello"
-TTL mykey
-```
-
-`Output:`
-
-```
+```bash
+127.0.0.1:7379> SET mykey "Hello"
+127.0.0.1:7379> TTL mykey
 (integer) -1
 ```
 
@@ -66,13 +56,8 @@ Here, the key `mykey` is set with a value of "Hello" but no expiration time is s
 
 ### Example 3: Non-Existent Key
 
-```DiceDB
-TTL non_existent_key
-```
-
-`Output:`
-
-```
+```bash
+127.0.0.1:7379> TTL non_existent_key
 (integer) -2
 ```
 
@@ -82,14 +67,9 @@ In this example, the key `non_existent_key` does not exist in the database. The 
 
 ### Example 4: Wrong Type Error
 
-```DiceDB
-HSET myhash field1 "value1"
-TTL myhash
-```
-
-`Output:`
-
-```
+```bash
+127.0.0.1:7379> HSET myhash field1 "value1"
+127.0.0.1:7379> TTL myhash
 (error) WRONGTYPE Operation against a key holding the wrong kind of value
 ```
 

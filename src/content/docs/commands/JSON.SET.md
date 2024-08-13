@@ -1,31 +1,27 @@
 ---
 title: JSON.SET
-description: The `JSON.SET` command enables you to create or modify JSON values within a specified key. This command offers granular control over JSON data structures, allowing for intricate manipulations.
+description: The `JSON.SET` command in DiceDB is used to set the JSON value at a specified key and path. This command allows storing, updating, and querying JSON documents in DiceDB.
 ---
 
-The `JSON.SET` command enables you to create or modify JSON values within a specified key. This command offers granular control over JSON data structures, allowing for intricate manipulations.
+The `JSON.SET` command in DiceDB is used to set the JSON value at a specified key and path. This command allows storing, updating, and querying JSON documents in DiceDB.
 
-### Syntax
+## Syntax
 
+```plaintext
+JSON.SET <key> <path> <json> [NX | XX]
 ```
-JSON.SET key path value
-```
 
-* `key`: The name of the key to which the JSON value will be associated.
-* `path`: JSONPath expression specifying the location within the document.
-* `value`: The JSON value to be stored at the specified path.
+## Parameters
 
-### Return Value
+- `key`: The key under which the JSON document is stored. If the key does not exist, it will be created.
+- `path`: The path within the JSON document where the value should be set. The path should be specified in JSONPath format. Use `$` to refer to the root of the document.
+- `json`: The JSON value to set at the specified path. This should be a valid JSON string.
+- `NX`: Optional flag. Only set the value if the key does not already exist.
+- `XX`: Optional flag. Only set the value if the key already exists.
 
-* `OK`: if the operation is successful.
+## Return Value
 
-### Behavior
-1. If the specified `key` doesn't exist, a new key is created.
-2. The `path` is interpreted as a JSONPath expression to pinpoint the exact location within the JSON document.
-3. The provided `value` is assigned to the determined path.
-   * If the path doesn't exist, it's created.
-   * If the path already exists, its value is overwritten.
-
+- `Simple String Reply`: Returns `OK` if the operation was successful.
 
 ### JSONPath Support
 
@@ -36,24 +32,62 @@ JSON.SET key path value
   * `.`: Accesses object properties.
   * `[]`: Accesses array elements.
 
-### Examples
+## Behaviour
 
+When the `JSON.SET` command is executed, the following behaviors are observed:
+
+1. `Key Creation`: If the specified key does not exist and no flags are provided, a new key is created with the given JSON value.
+1. `Path Creation`: If the specified path does not exist within the JSON document, it will be created.
+1. `Conditional Set`: If the `NX` flag is provided, the value will only be set if the key does not already exist. If the `XX` flag is provided, the value will only be set if the key already exists.
+1. `Overwrite`: If the key and path already exist, the existing value will be overwritten with the new JSON value.
+
+## Error Handling
+
+The `JSON.SET` command can raise the following errors:
+
+1. `Syntax Error`: If the command is not used with the correct syntax, a syntax error will be raised.
+   - `Error Message`: `(error) ERR wrong number of arguments for 'JSON.SET' command`
+1. `Invalid JSON`: If the provided JSON value is not a valid JSON string, an error will be raised.
+   - `Error Message`: `(error) ERR invalid JSON string`
+1. `Path Error`: If the specified path is invalid or cannot be created, an error will be raised.
+   - `Error Message`: `(error) ERR path not found`
+1. `NX/XX Conflict`: If both `NX` and `XX` flags are provided, an error will be raised.
+   - `Error Message`: `(error) ERR NX and XX flags are mutually exclusive`
+
+## Example Usage
+
+### Basic Usage
+
+Set a JSON value at the root of a new key:
+
+```bash
+127.0.0.1:7379> JSON.SET user:1001 $ '{"name": "John Doe", "age": 30}'
+OK
 ```
-JSON.SET avengers:1 $.name "Tony Stark"
+
+### Set Value at a Specific Path
+
+Set a JSON value at a specific path within an existing JSON document:
+
+```bash
+127.0.0.1:7379> JSON.SET user:1001 $.address '{"city": "New York", "zip": "10001"}'
+OK
 ```
 
-This command creates a new key named `avengers:1` with a JSON object containing a property `name` set to "Tony Stark".
+### Conditional Set with NX Flag
 
+Set a JSON value only if the key does not already exist:
+
+```bash
+127.0.0.1:7379> JSON.SET user:1002 $ '{"name": "Jane Doe", "age": 25}' NX
+OK
 ```
-JSON.SET avengers:1 $.address.city "New York"
+
+### Conditional Set with XX Flag
+
+Set a JSON value only if the key already exists:
+
+```bash
+127.0.0.1:7379> JSON.SET user:1001 $.age 31 XX
+OK
 ```
-
-This command adds a nested object `address` with a property `city` set to "New York" within the existing `avengers:1`.
-
-### Error Handling
-* `ERR invalid JSON`: If the provided `value` is not valid JSON.
-* `ERR syntax error`: If the `path` is malformed.
-* `ERR path not found`: If the specified path doesn't exist and cannot be created.
-* `ERR object expected`: If a path element expects an object but encounters a different type.
-* `ERR array index out of range`: If an array index in the path is out of bounds.
-* `(nil) reply`: If the `NX` or `XX` condition is not met.
