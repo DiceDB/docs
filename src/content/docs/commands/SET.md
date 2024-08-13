@@ -1,35 +1,181 @@
 ---
-title: SET
-description: The `SET` command is a fundamental operation in DiceDB, allowing you to store a string, integer, or any supported types against a particular key.
+title: "SET"
+description: The `SET` command in DiceDB is used to set the value of a key. If the key already holds a value, it is overwritten, regardless of its type. This is one of the most fundamental operations in DiceDB as it allows for both creating and updating key-value pairs.
 ---
 
-The `SET` command is a fundamental operation in DiceDB,
-allowing you to store a string, integer, or any supported types against a particular key.
-It's a versatile command with several options to control key behavior.
+The `SET` command in DiceDB is used to set the value of a key. If the key already holds a value, it is overwritten, regardless of its type. This is one of the most fundamental operations in DiceDB as it allows for both creating and updating key-value pairs.
 
-### Syntax
-```
-SET key value [EX seconds]
-```
-
-### Parameters
-
-* `key`: The name of the key to which the value will be associated.
-* `value`: The string value to be stored.
-* `EX seconds`: Sets an expiration time for the key in seconds.
-
-### Return Value
-
-* `OK`: If the set operation was successful.
-
-### Behavior
-
-1. If the specified `key` does not exist, a new key is created.
-3. If the `EX` option is used, an expiration time is set for the key.
-
-### Examples
+## Syntax
 
 ```
-SET mykey "Hello, world!"
-SET mykey "Hello, world!" EX 10
+SET key value [EX seconds | PX milliseconds] [NX | XX] [KEEPTTL]
+```
+
+## Parameters
+
+1. `key`: The name of the key to be set.
+
+   - Type: String
+   - Required: Yes
+
+1. `value`: The value to be set for the key.
+
+   - Type: String
+   - Required: Yes
+
+1. `EX seconds`: Set the specified expire time, in seconds.
+
+   - Type: Integer
+   - Required: No
+
+1. `PX milliseconds`: Set the specified expire time, in milliseconds.
+
+   - Type: Integer
+   - Required: No
+
+1. `NX`: Only set the key if it does not already exist.
+
+   - Type: None
+   - Required: No
+
+1. `XX`: Only set the key if it already exists.
+
+   - Type: None
+   - Required: No
+
+1. `KEEPTTL`: Retain the time-to-live associated with the key.
+
+   - Type: None
+   - Required: No
+
+## Return Value
+
+- Returns `OK` if the command is successful.
+- Returns `nil` if the `NX` or `XX` conditions are not met.
+- Returns an error in cases where the syntax or specified constraints are invalid.
+
+## Behaviour
+
+- If the specified key already exists, the `SET` command will overwrite the existing key-value pair with the new value unless the `NX` option is provided.
+- If the `NX` option is present, the command will set the key only if it does not already exist. If the key exists, no operation is performed and `nil` is returned.
+- If the `XX` option is present, the command will set the key only if it already exists. If the key does not exist, no operation is performed and `nil` is returned.
+- Using the `EX` or `PX` options together with `KEEPTTL` is not allowed and will result in an error.
+- When provided, `EX` sets the expiry time in seconds and `PX` sets the expiry time in milliseconds.
+- The `KEEPTTL` option ensures that the key's existing TTL is retained.
+
+## Error Handling
+
+The command may raise errors in the following scenarios:
+
+1. `Wrong type of value or key`:
+
+   - Error Message: `(error) WRONGTYPE Operation against a key holding the wrong kind of value`
+   - Occurs when attempting to use the command on a key that contains a non-string value.
+
+1. `Invalid syntax or conflicting options`:
+
+   - Error Message: `(error) ERR syntax error`
+   - Occurs if the command's syntax is incorrect, such as incompatible options like `EX` and `KEEPTTL` used together, or a missing required parameter.
+
+1. `Non-integer value for `EX`or`PX\`\`:
+
+   - Error Message: `(error) ERR value is not an integer or out of range`
+   - Occurs when the expiration time provided is not a valid integer.
+
+## Example Usage
+
+### Basic Usage
+
+Setting a key `foo` with the value `bar`:
+
+```
+SET foo bar
+```
+
+`Response`:
+
+```
+OK
+```
+
+### Using Expiration Time (in seconds)
+
+Setting a key `foo` with the value `bar` to expire in 10 seconds:
+
+```
+SET foo bar EX 10
+```
+
+`Response`:
+
+```
+OK
+```
+
+### Using Expiration Time (in milliseconds)
+
+Setting a key `foo` with the value `bar` to expire in 10000 milliseconds (10 seconds):
+
+```
+SET foo bar PX 10000
+```
+
+`Response`:
+
+```
+OK
+```
+
+### Setting Only if Key Does Not Exist
+
+Setting a key `foo` only if it does not already exist:
+
+```
+SET foo bar NX
+```
+
+`Response`:
+
+- If the key does not exist: `OK`
+- If the key exists: `nil`
+
+### Setting Only if Key Exists
+
+Setting a key `foo` only if it exists:
+
+```
+SET foo bar XX
+```
+
+`Response`:
+
+- If the key exists: `OK`
+- If the key does not exist: `nil`
+
+### Retaining Existing TTL
+
+Setting a key `foo` with a value `bar` and retaining existing TTL:
+
+```
+SET foo bar KEEPTTL
+```
+
+`Response`:
+
+```
+OK
+```
+
+### Invalid Usage
+
+Trying to set key `foo` with both `EX` and `KEEPTTL` will result in an error:
+
+```
+SET foo bar EX 10 KEEPTTL
+```
+
+`Response`:
+
+```
+(error) ERR syntax error
 ```

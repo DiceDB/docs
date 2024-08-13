@@ -77,6 +77,3 @@ This helps clients determine if the server is up and responsive. Essentially, it
 - The `PING` command works similarly in both standalone and clustered DiceDB environments.
 - It is typically sent periodically by clients to ensure the connection is still active.
 - The `PING` command does not modify the data within the DiceDB server or affect any ongoing transactions.
-
-This detailed documentation covers the usage, syntax, return value, examples, behavior, and error handling for the `PING` command in DiceDB. Utilizing this command allows clients to ensure their connection with the DiceDB server remains active and that the server is responsive.
-
