@@ -57,14 +57,6 @@ Here are a few examples demonstrating the usage of the GET command:
 (nil)
 ```
 
-### Example 3: Key Exists but Holds a Non-string Value
-
-```bash
-127.0.0.1:7379> LPUSH mylist "item1"
-127.0.0.1:7379> GET mylist
-(error) WRONGTYPE Operation against a key holding the wrong kind of value
-```
-
 ## Additional Notes
 
 - `Memory Usage`: The value returned by the GET command occupies memory only during the command execution and is handed back to the client.
