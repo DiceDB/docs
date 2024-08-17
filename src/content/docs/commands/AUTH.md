@@ -47,10 +47,19 @@ In this example, after successfully typing the correct password, the DiceDB serv
 
 ```bash
 127.0.0.1:7379> AUTH incorrect_password
-(error) ERR invalid password
+(error) WRONGPASS invalid username-password pair or user is disabled
 ```
 
 In this example, the provided password is incorrect. As a result, the DiceDB server responds with an error stating `(error) ERR invalid password`, indicating that the authentication has failed.
+
+### Invoking commands without AUTH
+
+```bash
+127.0.0.1:7379> GET x
+(error) NOAUTH Authentication required
+```
+
+In this example, when some other command is fired without doing `AUTH` then the above error is thrown denoting that authentication is required.
 
 ## Error Handling
 
