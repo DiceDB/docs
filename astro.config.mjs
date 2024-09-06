@@ -6,22 +6,25 @@ export default defineConfig({
   integrations: [
 		starlight({
 			title: 'DiceDB',
+      logo: {
+        src: './public/logo.png',
+        replacesTitle: true,
+      },
+      customCss: [
+        './src/styles/docs.css',
+      ],
+      // themes: ['starlight-theme-light'],
+      // useStarlightDarkModeSwitch: false,
       favicon: '/favicon.png',
-			social: {
-				github: 'https://github.com/dicedb/dice',
-        discord: 'https://discord.gg/6r8uXWtXh7',
-        twitter: 'https://twitter.com/thedicedb/',
-        'x.com': 'https://twitter.com/thedicedb/',
-			},
 			sidebar: [
         {
 					label: 'Get started',
 					autogenerate: { directory: 'get-started' }
 				},
-				{
-					label: 'Tutorials',
-					autogenerate: { directory: 'tutorials' }
-				},
+				// {
+				// 	label: 'Tutorials',
+				// 	autogenerate: { directory: 'tutorials' }
+				// },
         {
 					label: 'Commands',
 					autogenerate: { directory: 'commands' }

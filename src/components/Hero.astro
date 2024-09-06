@@ -1,0 +1,45 @@
+---
+import { Github, MoveRight } from 'lucide-astro'
+import Dice from './Dice.astro'
+---
+
+
+<div id="hero" class="hero">
+  <div class="hero-body">
+    <div class="columns is-vcentered">
+      <div class="column is-7 has-text-left">
+        <!-- <div style="margin-bottom: 2em;">
+          <a class="button is-info is-light" href="/">
+            <span>DiceDB 0.0.2 is out and we have shipped real-time reactivity. Details →</span>
+          </a>
+        </div> -->
+        <div class="image is-128x128">
+          <img src="/icon.png" alt="DiceDB Logo" />
+        </div>
+        <br />
+        <h1 class="title is-size-1">Real-time at Warp Speed</h1>
+        <p class="subtitle is-size-5">DiceDB is an in-memory real-time database with SQL-based real-time reactivity.</p>
+        <br />
+        <div class="buttons is-large">
+          <a href="/get-started/installation/" class="button is-primary is-medium">
+            <strong>Get Started →</strong>
+          </a>
+          <a
+              class="button is-medium"
+              target="_blank"
+              href="https://github.com/dicedb/dice"
+              title="DiceDB source code on GitHub"
+            >
+              <span class="icon"><Github /></span>
+              <span>GitHub (3.3k)</span>
+            </a>
+        </div>
+      </div>
+      <div class="column is-1"></div>
+      <div class="column is-4 is-hidden-mobile">
+        <br />
+        <Dice />
+      </div>
+    </div>
+  </div>
+</div>
