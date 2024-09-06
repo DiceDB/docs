@@ -1,5 +1,5 @@
 ---
-title: 'Announcing DiceDB 0.0.2'
+title: 'Announcing DiceDB v0.0.2'
 description: 'Lorem ipsum dolor sit amet'
 published_at: 2024-09-05
 ---

@@ -1,5 +1,5 @@
 {
-  "title": "Arpit Bhayani",
+  "title": "DiceDB",
   "description": "A CS engineer passionate about Databases, Language Internals, Distributed Datastores, and Advanced Algorithms. I am currently working with Google as a Staff Software with the Dataproc team in making Apache Spark faster.",
   "image": {
     "src": "https://edge.arpitbhayani.me/img/covers/general-cover.jpg",
@@ -8,5 +8,31 @@
   "image_tw": {
     "src": "https://edge.arpitbhayani.me/img/arpit-2.png",
     "alt": "Arpit Bhayani"
-  }
+  },
+  "featureHighlights": [
+    {
+      "title": "Speaks Redis",
+      "description": "a drop-in replacement of Redis; if you know Redis, you know DiceDB."
+    },
+    {
+      "title": "Push, never pull",
+      "description": "subscribe to a SQL query and get results pushed to you in real-time."
+    },
+    {
+      "title": "Native JSON support",
+      "description": "native, first-class JSON support for reads, writes, and queries."
+    },
+    {
+      "title": "Sub-millisecond latencies",
+      "description": "in-memory, no disk overhead, and every operation comples in 8 ms over the network."
+    },
+    {
+      "title": "Built for modern hardware",
+      "description": "squeezes every single ounce of performance from all the cores with zero contention."
+    },
+    {
+      "title": "Scaling is easy",
+      "description": "optimized for single node workloads, so, bulk up your server or shard to scale."
+    }
+  ]
 }

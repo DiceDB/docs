@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 
+import site from "../data/site.json"
+
 const title = "DiceDB";
 const description =
   "DiceDB is an in-memory database hyper-optimized for building real-time applications with SQL-based real-time reactivity baked in.";
@@ -9,4 +11,26 @@ const description =
 
 <Layout {title} {description}>
   <Hero />
+  <div class="section" style="margin: 3em 0;">
+    <div class="columns is-multiline">
+      {
+        site.featureHighlights.map(s => (
+          <div class="column is-4">
+            <div class="box">
+              <h2 class="title is-size-4">{ s.title }</h2>
+              <p class="is-size-5">{ s.description }</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="section" style="margin: 3em 0;">
+    <h1 class="title is-size-2">Not a transactional database</h1>
+    <p>Building real-time applications have never been this easy</p>
+  </div>
+  <div class="section" style="margin: 3em 0;">
+    <h1 class="title is-size-2">We make it super easy</h1>
+    <p>Building real-time applications have never been this easy</p>
+  </div>
 </Layout>
