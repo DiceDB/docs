@@ -1,0 +1,127 @@
+---
+import Layout from "./Layout.astro";
+import AboutMeVertical from "../components/AboutMeVertical.astro";
+
+const { blog } = Astro.props;
+
+const JSONLD = {
+  "@context": "https://schema.org/",
+  "@type": "BlogPosting",
+  "@id": `${Astro.url}#BlogPosting`,
+  mainEntityOfPage: Astro.url,
+  headline: blog.data.title,
+  name: blog.data.title,
+  description: blog.data.description,
+  datePublished: blog.data.published_at,
+  dateModified: blog.data.published_at,
+  author: {
+    "@type": "Person",
+    name: "Arpit Bhayani",
+    url: "https://arpitbhayani.me/about-arpit-bhayani",
+    image: "https://edge.arpitbhayani.me/img/arpit-2.png",
+  },
+  url: Astro.url,
+  isPartOf: {
+    "@type": "Blog",
+    "@id": "https://arpitbhayani.me/blogs/",
+    name: "Essays and Blogs by Arpit Bhayani",
+    publisher: {
+      "@type": "Person",
+      name: "Arpit Bhayani",
+      url: "https://arpitbhayani.me/about-arpit-bhayani",
+      image: "https://edge.arpitbhayani.me/img/arpit-2.png",
+    },
+  },
+};
+---
+
+<Layout
+  title={blog.data.title}
+  description={blog.data.description}
+  blog={blog}
+  {JSONLD}
+>
+  <div>
+    <section>
+      <div class="columns">
+        <div class="column is-7-desktop is-12-tablet is-12-mobile">
+          <div>
+            <h1
+              class="title has-text-primary is-size-2 is-size-3-mobile is-family-secondary is-italic"
+              style="line-height: 1.3em;"
+            >
+              {blog.data.title}
+            </h1>
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img
+                    class="is-rounded"
+                    src="https://edge.arpitbhayani.me/img/arpit-2.png"
+                  />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-5">
+                  <a class="has-text-black" href="/">Arpit Bhayani</a>
+                </p>
+                <p class="subtitle is-6">
+                  tinkerer, educator, and entrepreneur
+                </p>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="content blog-content">
+            {
+              blog.data.paper_url && (
+                <div class="notification" style="margin-bottom: -1em;">
+                  <p>
+                    These are my notes based on the paper
+                    <a
+                      class="has-text-link"
+                      href={blog.data.paper_url}
+                      target="_blank"
+                    >
+                      {blog.data.title}</a>.
+                  </p>
+                </div>
+              )
+            }
+            <slot />
+            {
+              blog.data.paper_url && (
+                <div class="notification">
+                  <p>
+                    The content presented here is a collection of my notes and
+                    explanations based on the paper. You can access the full
+                    paper{" "}
+                    <a
+                      class="has-text-link"
+                      href={blog.data.paper_url}
+                      target="_blank"
+                    >
+                      {blog.data.title}
+                    </a>
+                    . This is by no means an exhaustive explanation, and I
+                    strongly encourage you to read the actual paper for a
+                    comprehensive understanding. Any images you see are either
+                    taken directly from the paper or illustrated by{" "}
+                    <a class="has-text-link" href="/">
+                      me
+                    </a>
+                    .
+                  </p>
+                </div>
+              )
+            }
+          </div>
+        </div>
+        <div class="column is-1"></div>
+        <div class="column is-4">
+          <AboutMeVertical />
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "DiceDB",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,8 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.25.1",
-    "astro": "^4.10.2",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/starlight": "^0.26.3",
+    "astro-analytics": "^2.7.0",
+    "bulma": "^0.9.4",
+    "lucide-astro": "^0.438.0",
+    "sass": "^1.62.1",
     "sharp": "^0.32.5"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.78.0"
   }
 }

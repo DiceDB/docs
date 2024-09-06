@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "../../layouts/Layout.astro";
+import RecentBlogs from "../../components/RecentBlogs.astro";
+const blogs = (await getCollection("blog"))
+  .sort(
+    (a, b) => b.data.published_at.getTime() - a.data.published_at.getTime()
+  );
+const title = "Blogs | Arpit Bhayani";
+const description =
+  "I document my learnings and views every week, and cover various topics that interests me. Here are all the blogs I wrote to date.";
+---
+
+<Layout {title} {description}>
+  <div class="section">
+    <div class="columns">
+      <div class="column is-6-desktop is-6-tablet is-12-mobile">
+        <div class="content">
+          <h2 class="title is-size-3 is-family-secondary is-italic">Blogs</h2>
+          <p>
+            Every week, I documente and articulate my acquired knowledge and
+            personal perspectives on topics that captivate my interest. Here are
+            all blogs I wrote to date.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      {
+        (
+          <div class="content">
+            <RecentBlogs blogs={blogs} />
+          </div>
+        )
+      }
+    </div>
+  </div>
+</Layout>
