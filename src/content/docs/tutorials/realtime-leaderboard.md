@@ -21,7 +21,7 @@ to set up DiceDB on your system and start the server.
 The easiest way to get started with DiceDB is using [Docker](https://www.docker.com/) by running the following command.
 
 ```
-$ docker run dicedb/dice-server
+docker run dicedb/dice-server
 ```
 
 The above command will start the DiceDB server running locally on the port `7379` and you can connect
