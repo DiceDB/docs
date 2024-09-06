@@ -34,5 +34,19 @@
       "title": "Scaling is easy",
       "description": "optimized for single node workloads, so, bulk up your server or shard to scale."
     }
+  ],
+  "aboutDiceDB": [
+    {
+      "title": "Why did we call it DiceDB?",
+      "description": ""
+    },
+    {
+      "title": "The Problem Statement",
+      "description": ""
+    },
+    {
+      "title": "How we Operate?",
+      "description": ""
+    }
   ]
 }
