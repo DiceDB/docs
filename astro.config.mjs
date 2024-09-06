@@ -21,10 +21,10 @@ export default defineConfig({
 					label: 'Get started',
 					autogenerate: { directory: 'get-started' }
 				},
-				{
-					label: 'Tutorials',
-					autogenerate: { directory: 'tutorials' }
-				},
+				// {
+				// 	label: 'Tutorials',
+				// 	autogenerate: { directory: 'tutorials' }
+				// },
         {
 					label: 'Commands',
 					autogenerate: { directory: 'commands' }
