@@ -135,4 +135,3 @@ This example demonstrates how `QWATCH` provides real-time updates as the leaderb
 1. Use specific key patterns in the FROM clause wherever possible to limit the scope of the query.
 2. Keep `WHERE` conditions as simple as possible for better performance.
 3. Ensure type consistency in comparisons to avoid runtime errors, this is best done in your application layer.
-4. Consider the frequency of data changes and the number of concurrently running `QWATCH` queries to balance system performance.

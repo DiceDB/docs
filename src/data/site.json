@@ -24,7 +24,7 @@
     },
     {
       "title": "Sub-millisecond latencies",
-      "description": "in-memory, no disk overhead, and every operation comples in 8 ms over the network."
+      "description": "in-memory, no disk overhead, and every operation completes in 8 ms over the network."
     },
     {
       "title": "Built for modern hardware",

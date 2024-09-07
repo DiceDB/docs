@@ -7,8 +7,9 @@ export default defineConfig({
 		starlight({
 			title: 'DiceDB',
       logo: {
-        src: './public/logo.png',
         replacesTitle: true,
+        light: './public/dicedb-logo-light.png',
+        dark: './public/dicedb-logo-dark.png',
       },
       customCss: [
         './src/styles/docs.css',
