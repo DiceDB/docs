@@ -2,12 +2,12 @@
   "title": "DiceDB",
   "description": "A CS engineer passionate about Databases, Language Internals, Distributed Datastores, and Advanced Algorithms. I am currently working with Google as a Staff Software with the Dataproc team in making Apache Spark faster.",
   "image": {
-    "src": "https://edge.arpitbhayani.me/img/covers/general-cover.jpg",
-    "alt": "Arpit Bhayani"
+    "src": "/img/general-cover.png",
+    "alt": "DiceDB"
   },
   "image_tw": {
-    "src": "https://edge.arpitbhayani.me/img/arpit-2.png",
-    "alt": "Arpit Bhayani"
+    "src": "/img/general-cover.png",
+    "alt": "DiceDB"
   },
   "featureHighlights": [
     {

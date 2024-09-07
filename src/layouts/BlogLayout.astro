@@ -18,20 +18,18 @@ const JSONLD = {
   dateModified: blog.data.published_at,
   author: {
     "@type": "Person",
-    name: "Arpit Bhayani",
-    url: "https://arpitbhayani.me/about-arpit-bhayani",
-    image: "https://edge.arpitbhayani.me/img/arpit-2.png",
+    name: author.data.name,
+    image: author.data.avatar_url
   },
   url: Astro.url,
   isPartOf: {
     "@type": "Blog",
-    "@id": "https://arpitbhayani.me/blogs/",
-    name: "Essays and Blogs by Arpit Bhayani",
+    "@id": "https://dicedb.io/blog/",
+    name: "DiceDB Blog",
     publisher: {
       "@type": "Person",
-      name: "Arpit Bhayani",
-      url: "https://arpitbhayani.me/about-arpit-bhayani",
-      image: "https://edge.arpitbhayani.me/img/arpit-2.png",
+      name: author.data.name,
+      image: author.data.avatar_url
     },
   },
 };
