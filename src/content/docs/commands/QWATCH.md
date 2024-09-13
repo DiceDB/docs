@@ -19,15 +19,15 @@ QWATCH dsql-query
 * dsql-query: A SQL-like query specifying the data to be monitored and operation to be performed. The query syntax is as follows:
 
    * `SELECT`: Specifies the fields to be returned, `$key`, `$value`, and `$value.<attr>`.
-   * `FROM`: Specifies the key pattern and supports the `%` operator from SQL.
    * `WHERE`: Optional clause for filtering results based on conditions.
+   * `LIKE`: Optional clause within WHERE to specify the key pattern and supports the `%` operator from SQL.
    * `ORDER BY`: Optional clause for sorting results.
    * `LIMIT`: Optional clause to limit the number of results.
 
 ## Query Syntax
 
 ```sql
-SELECT $key, $value  FROM 'key_pattern'
+SELECT $key, $value
 WHERE condition
 ORDER BY field [ASC | DESC] LIMIT n
 ```
@@ -39,12 +39,14 @@ Special column names:
 ### WHERE Clause
 
 The WHERE clause allows you to filter results based on conditions applied to the key or value. It supports various comparison operators and can include complex logical expressions.
+It also supports the LIKE clause as one of the conditions.
 
 Supported features:
 - Comparison operators: `=`, `<`, `>`, `<=`, `>=`, `!=`
 - Logical operators: `AND`, `OR`
 - Parentheses for grouping conditions
 - Comparison between key and value fields
+- LIKE clause: `like 'pattern'`
 
 ## Return Value
 
@@ -52,10 +54,10 @@ Supported features:
 
 ## Behavior
 
-1. `Query Parsing`: The provided query is parsed to extract the `SELECT`, `FROM`, `WHERE`, `ORDER BY`, and `LIMIT` clauses.
+1. `Query Parsing`: The provided query is parsed to extract the `SELECT`, `WHERE`, `LIKE`, `ORDER BY`, and `LIMIT` clauses.
 2. `Subscription Establishment`: The client establishes a subscription to the specified query.
 3. `Initial Result`: The initial result set based on the current data is sent to the client.
-4. `Data Change Monitoring`: DiceDB continuously monitors the data sources specified in the FROM clause.
+4. `Data Change Monitoring`: DiceDB continuously monitors the data sources specified in the LIKE clause.
 5. `Query Reevaluation`: Whenever data changes that might affect the query result, the query is reevaluated.
 6. `Result Push`: If the reevaluated result differs from the previous result, the new result set is pushed to the subscribed client.
 
@@ -66,7 +68,7 @@ Let's explore a practical example of using the `QWATCH` command to create a real
 ### Query
 
 ```bash
-127.0.0.1:7379> QWATCH "SELECT $key, $value FROM `match:100:*` WHERE $value > 10 ORDER BY $value DESC LIMIT 3"
+127.0.0.1:7379> QWATCH "SELECT $key, $value WHERE $key like 'match:100:*' AND $value > 10 ORDER BY $value DESC LIMIT 3"
 ```
 
 This query does the following:
@@ -132,6 +134,6 @@ This example demonstrates how `QWATCH` provides real-time updates as the leaderb
 
 ## Best Practices
 
-1. Use specific key patterns in the FROM clause wherever possible to limit the scope of the query.
+1. Use specific key patterns in the LIKE clause wherever possible to limit the scope of the query.
 2. Keep `WHERE` conditions as simple as possible for better performance.
 3. Ensure type consistency in comparisons to avoid runtime errors, this is best done in your application layer.
