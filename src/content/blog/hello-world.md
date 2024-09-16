@@ -15,15 +15,14 @@ author: arpit
 
 ## Contribute
 
-If you like the vision and mission, you can also chime in. We are in the early stages of development, and the open-source community plays a critical role in shaping its future. Here are a few ways you can get involved:
+If you like the vision and mission, you can also chime in. We are in the early stages of development, and the community plays a critical role in shaping its future. Here are a few ways you can get involved:
 
-- fix a bug
-- contribute a feature
-- pitch an idea
-- write a blog
-- write a tutorial
+- [fix a bug](https://github.com/DiceDB/dice/issues?q=is%3Aissue+is%3Aopen+label%3Abug+)
+- [submit a feature patch](https://github.com/DiceDB/dice/issues)
+- [suggest a feature](https://github.com/DiceDB/dice/discussions/new?category=ideas)
+- [write a tutorial](https://github.com/DiceDB/dice/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation)
 
-You can always support the project by [starring the repository](https://github.com/dicedb/dice) and help us gain visibility in the developer community
+You can always support the project by [starring the repository](https://github.com/dicedb/dice) and help us gain visibility in the developer community.
 
 ## Community
 
@@ -32,7 +31,7 @@ The agenda of the call is to discuss the latest developments, gather feedback, a
 
 Stay updated with the latest news and announcements by keeping an eye on the blog and following [DiceDB](https://twitter.com/thedicedb) and [Arpit Bhayani](https://twitter.com/arpit_bhayani), and [Jyotinder Singh](https://twitter.com/Jyotinder_Singh/) on social handles.
 
-## Before we go
+## Before we go build stuff
 
 DiceDB isn't just another database; it's a platform purpose-built for the real-time era. As real-time systems become increasingly prevalent in modern applications, DiceDB's hyper-optimized architecture is positioned to power the next generation of user experiences.
 
