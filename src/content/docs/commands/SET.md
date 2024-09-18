@@ -8,7 +8,8 @@ The `SET` command in DiceDB is used to set the value of a key. If the key alread
 ## Syntax
 
 ```
-SET key value [EX seconds | PX milliseconds] [NX | XX] [KEEPTTL]
+SET key value [NX | XX] [EX seconds | PX milliseconds | 
+EXAT unix-time-seconds | PXAT unix-time-milliseconds | KEEPTTL ]
 ```
 
 ## Parameters
@@ -28,7 +29,17 @@ SET key value [EX seconds | PX milliseconds] [NX | XX] [KEEPTTL]
    - Type: Integer
    - Required: No
 
+1. `EXAT timestamp-seconds`: Set the specified Unix time at which the key will expire, in seconds (a positive integer).
+
+   - Type: Integer
+   - Required: No
+
 1. `PX milliseconds`: Set the specified expire time, in milliseconds.
+
+   - Type: Integer
+   - Required: No
+
+1. `PXAT timestamp-milliseconds`: Set the specified Unix time at which the key will expire, in milliseconds (a positive integer).
 
    - Type: Integer
    - Required: No
@@ -59,8 +70,9 @@ SET key value [EX seconds | PX milliseconds] [NX | XX] [KEEPTTL]
 - If the specified key already exists, the `SET` command will overwrite the existing key-value pair with the new value unless the `NX` option is provided.
 - If the `NX` option is present, the command will set the key only if it does not already exist. If the key exists, no operation is performed and `nil` is returned.
 - If the `XX` option is present, the command will set the key only if it already exists. If the key does not exist, no operation is performed and `nil` is returned.
-- Using the `EX` or `PX` options together with `KEEPTTL` is not allowed and will result in an error.
+- Using the `EX`, `EXAT`, `PX` or `PXAT` options together with `KEEPTTL` is not allowed and will result in an error.
 - When provided, `EX` sets the expiry time in seconds and `PX` sets the expiry time in milliseconds.
+- When provided, `EXAT` sets the expiry time in timestamp seconds and `PXAT` sets the expiry time in timestamp milliseconds.
 - The `KEEPTTL` option ensures that the key's existing TTL is retained.
 
 ## Error Handling
@@ -102,12 +114,30 @@ Setting a key `foo` with the value `bar` to expire in 10 seconds:
 OK
 ```
 
+### Using Expiration Time (in timestamp seconds)
+
+Setting a key `foo` with the value `bar` to expire at 1726696183 timestamp seconds:
+
+```bash
+127.0.0.1:7379> SET foo bar EXAT 1726696183
+OK
+```
+
 ### Using Expiration Time (in milliseconds)
 
 Setting a key `foo` with the value `bar` to expire in 10000 milliseconds (10 seconds):
 
 ```bash
 127.0.0.1:7379> SET foo bar PX 10000
+OK
+```
+
+### Using Expiration Time (in timestamp milliseconds)
+
+Setting a key `foo` with the value `bar` to expire at 1726696092379 timestamp milliseconds:
+
+```bash
+127.0.0.1:7379> SET foo bar PXAT 1726696092379
 OK
 ```
 
