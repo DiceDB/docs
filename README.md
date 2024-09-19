@@ -34,3 +34,9 @@ Contributors can join the [Discord Server](https://discord.gg/6r8uXWtXh7) for qu
 
 1. `src/content/docs/commands` is where all the commands are documented
 2. `src/content/docs/tutorials` is where all the tutorials are documented
+
+## Contributors
+
+<a href = "https://github.com/dicedb/docs/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=dicedb/docs"/>
+</a>
