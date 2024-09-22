@@ -1,6 +1,6 @@
 ---
 title: 'DiceDB v0.0.2 Release Notes'
-description: 'We are excited to announce the release of version 0.0.2. This update brings significant enhancements to our in-memory real-time database, further solidifying its position as a high-performance, SQL-based reactive system designed to replace Redis in modern, real-time applications.'
+description: 'We are proud to announce the release of DiceDB version 0.0.2, a significant update that enhances our high-performance, in-memory real-time database. This release ships new SQL capabilities, advanced data type handling, performance optimizations, and expanded support for Redis-compatible commands, further solidifying DiceDB as a superior choice for building and scaling real-time applications on modern hardware.'
 published_at: 2024-09-06
 author: arpit
 ---
