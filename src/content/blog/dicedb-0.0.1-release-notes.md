@@ -1,5 +1,5 @@
 ---
-title: 'DiceDB 0.0.1 Release Notes'
+title: 'DiceDB v0.0.1 Release Notes'
 description: 'The 0.0.1 release of DiceDB sets the groundwork for a highly optimized, real-time in-memory database, intended to serve as a drop-in replacement for Redis. The first iteration focuses on ensuring compatibility with Redis while introducing key innovations in memory optimization, data structure efficiency, and security. Here are the key highlights of the things we shipped.'
 published_at: 2024-06-07
 author: arpit
