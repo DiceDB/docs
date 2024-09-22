@@ -1,6 +1,6 @@
 ---
 title: 'Releasing DiceDB v0.0.4'
-description: 'In this release of DiceDB version 0.0.4, we've made significant strides in enhancing the functionality, performance, and compatibility of our in-memory real-time database. As the lead engineer on this project, I'm excited to share the technical details of our latest improvements.'
+description: ''
 published_at: 2024-09-20
 author: arpit
 ---
