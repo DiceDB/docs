@@ -1,6 +1,6 @@
 ---
 title: 'DiceDB v0.0.3 Release Notes'
-description: 'The release of DiceDB version 0.0.3 is a major step forward in our mission to deliver an in-memory real-time database with SQL-based reactivity. In this version, DiceDB betters its SQL-based reactivity, advanced concurrency controls, and lock-free architecture. Let's break down each significant change, enhancement, and addition from a technical standpoint.'
+description: 'The release of DiceDB version 0.0.3 is a major step forward in our mission to deliver an in-memory real-time database with SQL-based reactivity. In this version, DiceDB betters its SQL-based reactivity, advanced concurrency controls, and lock-free architecture.'
 published_at: 2024-09-11
 author: arpit
 ---
