@@ -1,11 +1,11 @@
 ---
 title: 'DiceDB v0.0.3 Release Notes'
-description: 'The release of DiceDB version 0.0.3 represents a major step forward in our mission to deliver an in-memory, real-time database optimized for modern hardware. Designed as a high-performance alternative to Redis, DiceDB introduces SQL-based reactivity, advanced concurrency controls, and lock-free architecture. In this release, several crucial improvements, optimizations, and new features have been implemented, improving both performance and functionality. In this detailed overview, we will break down each significant change, enhancement, and addition from a technical standpoint.'
+description: 'The release of DiceDB version 0.0.3 is a major step forward in our mission to deliver an in-memory real-time database with SQL-based reactivity. In this version, DiceDB betters its SQL-based reactivity, advanced concurrency controls, and lock-free architecture. Let's break down each significant change, enhancement, and addition from a technical standpoint.'
 published_at: 2024-09-11
 author: arpit
 ---
 
-The release of DiceDB version 0.0.3 represents a major step forward in our mission to deliver an in-memory, real-time database optimized for modern hardware. Designed as a high-performance alternative to Redis, DiceDB betters its SQL-based reactivity, advanced concurrency controls, and lock-free architecture. In this release, several crucial improvements, optimizations, and new features have been implemented, improving both performance and functionality. Let's break down each significant change, enhancement, and addition from a technical standpoint.
+The release of DiceDB version 0.0.3 is a major step forward in our mission to deliver an in-memory real-time database with SQL-based reactivity. In this version, DiceDB betters its SQL-based reactivity, advanced concurrency controls, and lock-free architecture. Let's break down each significant change, enhancement, and addition from a technical standpoint.
 
 ## Query and DSQL Improvements
 
@@ -17,7 +17,7 @@ We have added **common cache support per fingerprint** in `QWATCH`, our query wa
 
 ### Exponential Backoff for `QWATCH` Writes
 
-For scenarios involving high-load or network instability, we have implemented **retry with exponential backoff** for QWATCH writes. This improvement enhances the system's resilience by gradually increasing retry intervals during transient failures, which avoids overwhelming the system during network issues or spikes in traffic. This retry mechanism ensures that QWATCH remains responsive under duress without risking excessive load.
+For scenarios involving high-load or network instability, we have implemented **retry with exponential backoff** for `QWATCH` writes. This improvement enhances the system's resilience by gradually increasing retry intervals during transient failures, which avoids overwhelming the system during network issues or spikes in traffic. This retry mechanism ensures that `QWATCH` remains responsive under duress without risking excessive load.
 
 ### Support for LIKE and NOT LIKE Operators
 
@@ -27,7 +27,7 @@ The addition of the `LIKE` and `NOT LIKE` operators allows for more flexible str
 
 One of the key changes in DiceDB's Structured Query Language (DSQL) is the **deprecation of the FROM clause**. In this release, key filtering is now handled directly in the `WHERE` clause, aligning DiceDB's query structure more closely with standard SQL practices. This shift simplifies query syntax while maintaining the unique optimizations that DiceDB brings to real-time data processing.
 
-## SQL Parser Optimization: ORDER BY Handling
+## SQL Parser Optimization: `ORDER BY` Handling
 
 Improvements to the SQL parser include more robust handling of the `ORDER BY` clause. This enhancement provides more efficient sorting capabilities, particularly for large datasets. Optimizing the parsing and execution of `ORDER BY` operations leads to lower query latencies and more predictable performance, especially in scenarios involving complex sorting criteria or large data volumes.
 
@@ -39,13 +39,9 @@ DiceDB continues to solidify its role as a drop-in replacement for Redis. We hav
 
 One of the notable changes in this release is the resolution of deviations in bitmap commands between Redis and DiceDB. This ensures that users migrating from Redis to DiceDB can maintain existing application logic without encountering unexpected behavior. Full bitmap compatibility aligns DiceDB more closely with Redis, reducing the friction involved in migration.
 
-### COMMAND Command Addition
+### Expanded Hash Operations: `HGET` Command
 
-The introduction of the `COMMAND` command significantly enhances our compatibility with Redis. By providing support for this command, DiceDB enables existing Redis clients and tools to interact with the database seamlessly. This feature facilitates smoother integration and allows developers to leverage existing Redis tooling without modification.
-
-### Expanded Hash Operations: HGET Command
-
-A crucial addition to this release is the **HGET command**, extending DiceDB's support for hash-based operations. This addition has been rigorously tested with unit and integration tests to ensure its robustness in production environments. The ability to efficiently retrieve specific fields from a hash enhances DiceDB's flexibility in handling structured data and is especially useful for applications with dynamic or nested data structures.
+A crucial addition to this release is the **HGET command**, extending DiceDB's support for hash-based operations. The ability to efficiently retrieve specific fields from a hash enhances DiceDB's flexibility in handling structured data and is especially useful for applications with dynamic or nested data structures.
 
 ### Improved Expiry Command Handling
 
@@ -85,8 +81,8 @@ Error handling has been another critical focus area in this release. We've refin
 
 ### Refined Type Error Returns
 
-The refactoring of the error return types enhances the our ability to diagnose and fix issues. By providing more specific error messages and ensuring consistent error handling across the codebase, we have reduced the surface area for potential bugs. This improvement also simplifies unit testing and improves the overall robustness of the system, particularly under heavy workloads where error tolerance is critical.
+The refactoring of the error return types enhances our ability to diagnose and fix issues. By providing more specific error messages and ensuring consistent error handling across the codebase, we have reduced the surface area for potential bugs. This improvement also simplifies unit testing and improves the overall robustness of the system, particularly under heavy workloads where error tolerance is critical.
 
 ## Summary
 
-Version 0.0.3 of DiceDB introduces substantial improvements in performance, compatibility, and functionality. The refactored codebase, optimized query execution, and enhanced SQL capabilities make DiceDB a more powerful tool for building truly real-time applications. The lock-free store design, coupled with improved error handling and retry mechanisms, significantly improves the system's reliability and scalability, making DiceDB a compelling choice for modern, high-performance workloads. This release continues to position DiceDB as a leading solution in the real-time database space, combining the best of Redis compatibility with the flexibility and power of SQL-based reactivity.
+DiceDB v0.0.3 introduces substantial improvements in performance, compatibility, and functionality. The refactored codebase, optimized query execution, and enhanced SQL capabilities make DiceDB a more powerful tool for building truly real-time applications. The lock-free store design, coupled with improved error handling and retry mechanisms, significantly improves the system's reliability and scalability, making DiceDB a compelling choice for modern, high-performance workloads. This release continues to position DiceDB as a leading solution in the real-time database space, combining the best of Redis compatibility with the flexibility and power of SQL-based reactivity.
