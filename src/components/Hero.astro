@@ -1,6 +1,7 @@
 ---
 import { Github, MoveRight } from 'lucide-astro'
 import Dice from './Dice.astro'
+import site from "../data/site.json";
 ---
 
 
@@ -16,9 +17,13 @@ import Dice from './Dice.astro'
           <img src="/icon.png" alt="DiceDB Logo" />
         </div>
         <br />
-        <h1 class="title is-size-1">Real-time at Warp Speed</h1>
-        <p class="subtitle is-size-5">DiceDB is an in-memory real-time database with SQL-based reactivity.</p>
-        <br />
+        <h1 class="title is-size-1">Build truly real-time applications</h1>
+        <!-- <p class="subtitle is-size-5">
+          DiceDB is an in-memory real-time database with native support for push.
+          It is a drop-in replacement of Redis with a powerful SQL-based query engine.
+          The query engine allows you to subscribe to a query and upon some change
+          in data the output is streamed to the client. 
+        </p> -->
         <div class="buttons is-large">
           <a href="/get-started/installation/" class="button is-primary is-medium">
             <strong>Get Started →</strong>
@@ -30,9 +35,13 @@ import Dice from './Dice.astro'
               title="DiceDB source code on GitHub"
             >
               <span class="icon"><Github /></span>
-              <span>GitHub (4k)</span>
+              <span>GitHub (4k+)</span>
             </a>
         </div>
+        <p class="has-text-grey">
+          Want to evaluate and adopt DiceDB at your org?
+          <a href={site.calendar_url} target="_blank">block our calendar</a>.
+        </p>
       </div>
       <div class="column is-1"></div>
       <div class="column is-4 is-hidden-mobile">
