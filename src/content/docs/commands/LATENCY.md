@@ -14,6 +14,7 @@ LATENCY [SUBCOMMAND] [ARGUMENTS]
 ## Parameters
 
 - `SUBCOMMAND`: The specific operation to perform. The available subcommands are:
+
   - `LATEST`: Returns the latest latency spikes.
   - `HISTORY`: Returns the latency history for a specific event.
   - `RESET`: Resets the latency data for specific events or all events.

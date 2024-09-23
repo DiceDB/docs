@@ -1,6 +1,6 @@
 ---
-title: 'Realtime Leaderboard'
-description: 'Create a gaming leaderboard in the easiest way possible.'
+title: "Realtime Leaderboard"
+description: "Create a gaming leaderboard in the easiest way possible."
 ---
 
 In the world of gaming, leaderboards are essential for tracking player
@@ -10,6 +10,7 @@ In this tutorial, we'll walk through the process of creating a gaming leaderboar
 using DiceDB CLI commands, without relying on any SDK.
 
 Prerequisites:
+
 - [DiceDB](https://github.com/dicedb/dice) installed on your system
 - Basic familiarity with [DiceDB and its CLI](https://github.com/dicedb/dice?tab=readme-ov-file#dice-in-action)
 
@@ -34,7 +35,6 @@ just run the following command on your machine.
 ```
 pip install dicedb-cli
 ```
-
 
 ## Connecting to DiceDB
 

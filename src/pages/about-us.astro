@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import site from "../data/site.json"
+import site from "../data/site.json";
 
 const title = "About Us";
 const description = "";
@@ -19,11 +19,11 @@ const description = "";
         <div class="column is-8">
           <div class="columns is-multiline">
             {
-              site.aboutDiceDB.map(s => (
+              site.aboutDiceDB.map((s) => (
                 <div class="column is-6">
                   <div class="box">
-                    <h2 class="title is-size-5">{ s.title }</h2>
-                    <p class="is-size-6">{ s.description }</p>
+                    <h2 class="title is-size-5">{s.title}</h2>
+                    <p class="is-size-6">{s.description}</p>
                   </div>
                 </div>
               ))

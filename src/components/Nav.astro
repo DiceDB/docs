@@ -1,8 +1,7 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
 const currentPage = pathname.split("/")[1];
-import SocialHandlesIcons from './SocialHandlesIcons.astro';
-
+import SocialHandlesIcons from "./SocialHandlesIcons.astro";
 ---
 
 <div>
@@ -34,17 +33,13 @@ import SocialHandlesIcons from './SocialHandlesIcons.astro';
       <div class="navbar-start"></div>
       <div class="navbar-end">
         <a
-          class={`navbar-item ${
-            currentPage === "docs" && "is-active"
-          }`}
+          class={`navbar-item ${currentPage === "docs" && "is-active"}`}
           href="/get-started/installation/"
         >
           <span class="has-text-weight-bold is-size-5"> Docs</span>
         </a>
         <a
-          class={`navbar-item ${
-            currentPage === "blogs" && "is-active"
-          }`}
+          class={`navbar-item ${currentPage === "blogs" && "is-active"}`}
           href="/blog"
         >
           <span class="has-text-weight-bold is-size-5"> Blog</span>

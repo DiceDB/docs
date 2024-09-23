@@ -33,7 +33,7 @@ const { title, description, img, video, blog, session, JSONLD } = Astro.props;
   JSONLD && (
     <Fragment
       set:html={`<script type="application/ld+json">${JSON.stringify(
-        JSONLD
+        JSONLD,
       )}</script>`}
     />
   )

@@ -1,6 +1,6 @@
 ---
-title: 'DiceDB v0.0.4 Release Notes'
-description: 'In this version 0.0.4 of DiceDB, we have made crucial enhancements aimed at refining the DiceDB performance, reliability, and overall functionality. These changes are driven by our goal of offering a drop-in replacement for Redis, optimized for real-time applications, without sacrificing the flexibility or power that modern systems require.'
+title: "DiceDB v0.0.4 Release Notes"
+description: "In this version 0.0.4 of DiceDB, we have made crucial enhancements aimed at refining the DiceDB performance, reliability, and overall functionality. These changes are driven by our goal of offering a drop-in replacement for Redis, optimized for real-time applications, without sacrificing the flexibility or power that modern systems require."
 published_at: 2024-09-20
 author: arpit
 ---

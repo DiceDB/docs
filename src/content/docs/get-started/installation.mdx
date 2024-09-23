@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: 'Steps to install DiceDB and get started with it.'
+description: "Steps to install DiceDB and get started with it."
 sidebar:
   order: 1
 ---
@@ -39,9 +39,9 @@ To run DiceDB for local development or running from source, you will need
 
 1. [Golang](https://go.dev/)
 2. Any of the below supported platform environment:
-    1. [Linux based environment](https://en.wikipedia.org/wiki/Comparison_of_Linux_distributions)
-    2. [OSX (Darwin) based environment](https://en.wikipedia.org/wiki/MacOS)
-    3. WSL under Windows
+   1. [Linux based environment](https://en.wikipedia.org/wiki/Comparison_of_Linux_distributions)
+   2. [OSX (Darwin) based environment](https://en.wikipedia.org/wiki/MacOS)
+   3. WSL under Windows
 
 ```
 $ git clone https://github.com/dicedb/dice
@@ -63,11 +63,13 @@ DiceDB provides a hot-reloading development environment, which allows you to ins
 To Install Air on your system you have following options.
 
 1. If you're on go 1.22+
+
 ```sh
 go install github.com/air-verse/air@latest
 ```
 
 2. Install the Air binary
+
 ```sh
 # binary will be installed at $(go env GOPATH)/bin/air
 curl -sSfL https://raw.githubusercontent.com/air-verse/air/master/install.sh | sh -s -- -b $(go env GOPATH)/bin

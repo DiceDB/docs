@@ -1,6 +1,6 @@
 ---
-title: 'DiceDB v0.0.2 Release Notes'
-description: 'We are proud to announce the release of DiceDB version 0.0.2, a significant update that enhances our high-performance, in-memory real-time database. This release ships new SQL capabilities, advanced data type handling, performance optimizations, and expanded support for Redis-compatible commands, further solidifying DiceDB as a superior choice for building and scaling real-time applications on modern hardware.'
+title: "DiceDB v0.0.2 Release Notes"
+description: "We are proud to announce the release of DiceDB version 0.0.2, a significant update that enhances our high-performance, in-memory real-time database. This release ships new SQL capabilities, advanced data type handling, performance optimizations, and expanded support for Redis-compatible commands, further solidifying DiceDB as a superior choice for building and scaling real-time applications on modern hardware."
 published_at: 2024-09-06
 author: arpit
 ---
@@ -19,7 +19,7 @@ The `QWATCH` command leverages the power of DiceDB SQL (DSQL) to enable real-tim
 
 ### SQL Parsing for QWATCH
 
-To support `QWATCH`, DiceDB v0.0.2 includes initial support for SQL parsing within the DSQL engine. This means that complex SQL queries can now be parsed, executed, and subscribed to, allowing for powerful query capabilities with real-time updates. 
+To support `QWATCH`, DiceDB v0.0.2 includes initial support for SQL parsing within the DSQL engine. This means that complex SQL queries can now be parsed, executed, and subscribed to, allowing for powerful query capabilities with real-time updates.
 
 ### Support for `ORDER BY $value` and `LIMIT`
 

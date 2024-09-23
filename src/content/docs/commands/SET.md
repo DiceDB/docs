@@ -8,7 +8,7 @@ The `SET` command in DiceDB is used to set the value of a key. If the key alread
 ## Syntax
 
 ```
-SET key value [NX | XX] [EX seconds | PX milliseconds | 
+SET key value [NX | XX] [EX seconds | PX milliseconds |
 EXAT unix-time-seconds | PXAT unix-time-milliseconds | KEEPTTL ]
 ```
 
