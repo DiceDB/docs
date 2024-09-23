@@ -15,8 +15,12 @@
       "description": "a drop-in replacement of Redis; if you know Redis, you know DiceDB."
     },
     {
-      "title": "Push, never pull",
-      "description": "subscribe to a SQL query and get results pushed to you in real-time."
+      "title": "SQL support",
+      "description": "fire SQL queries and query your most crucial data at ultra low latency."
+    },
+    {
+      "title": "Push and pull, both",
+      "description": "fire a SQL query like always, or watch it and get results pushed to you in real-time."
     },
     {
       "title": "Native JSON support",
@@ -24,15 +28,15 @@
     },
     {
       "title": "Sub-millisecond latencies",
-      "description": "in-memory, no disk overhead, and every operation completes in 8 ms over the network."
+      "description": "in-memory, no disk overhead, and every operation completes within 1 ms."
     },
     {
       "title": "Built for modern hardware",
       "description": "squeezes every single ounce of performance from all the cores with zero contention."
     },
     {
-      "title": "Scaling is easy",
-      "description": "optimized for single node workloads, so, bulk up your server or shard to scale."
+      "title": "HTTP and WebSockets",
+      "description": "want your clients to talk to database? great! we natively support both HTTP and WebSocket."
     }
   ],
   "aboutDiceDB": [
