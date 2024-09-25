@@ -1,11 +1,7 @@
 ---
 title: JSON.TYPE
-description: Documentation for the Redis command JSON.TYPE
+description: Documentation for the DiceDB command JSON.TYPE
 ---
-
-# DiceDB Command: JSON.TYPE
-
-## Overview
 
 The `JSON.TYPE` command is part of the DiceDBJSON module, which allows you to work with JSON data structures in DiceDB. This command is used to determine the type of a value stored at a specified path within a JSON document.
 

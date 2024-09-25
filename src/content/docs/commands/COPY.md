@@ -1,11 +1,7 @@
 ---
 title: COPY
-description: Documentation for the Redis command COPY
+description: Documentation for the DiceDB command COPY
 ---
-
-# DiceDB COPY Command Documentation
-
-## Overview
 
 The `COPY` command in DiceDB is used to create a copy of a key. This command allows you to duplicate the value stored at a specified key to a new key. The new key can be in the same database or a different database. This command is useful for duplicating data without the need to retrieve and reinsert it manually.
 

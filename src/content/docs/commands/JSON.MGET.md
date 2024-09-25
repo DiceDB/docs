@@ -1,11 +1,7 @@
 ---
 title: JSON.MGET
-description: Documentation for the Redis command JSON.MGET
+description: Documentation for the DiceDB command JSON.MGET
 ---
-
-# DiceDB Command: JSON.MGET
-
-## Overview
 
 The `JSON.MGET` command in DiceDB is used to retrieve the values of specific JSON keys from multiple JSON documents stored at different keys. This command is particularly useful when you need to fetch the same JSON path from multiple JSON objects in a single operation, thereby reducing the number of round trips to the DiceDB server.
 

@@ -1,11 +1,7 @@
 ---
 title: RPOP
-description: Documentation for the Redis command RPOP
+description: Documentation for the DiceDB command RPOP
 ---
-
-# DiceDB Command: RPOP
-
-## Overview
 
 The `RPOP` command in DiceDB is used to remove and return the last element of a list. This command is particularly useful when you need to process elements in a Last-In-First-Out (LIFO) order.
 

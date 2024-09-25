@@ -1,11 +1,7 @@
 ---
 title: DBSIZE
-description: Documentation for the Redis command DBSIZE
+description: Documentation for the DiceDB command DBSIZE
 ---
-
-# DiceDB Command: DBSIZE
-
-## Overview
 
 The `DBSIZE` command in DiceDB is used to return the number of keys in the currently selected database. This command is useful for monitoring and managing the size of your DiceDB database, providing a quick way to understand the number of keys stored.
 
@@ -70,8 +66,3 @@ OK
 ```
 
 In this example, database 0 contains 42 keys, and database 1 contains 15 keys.
-
-## Conclusion
-
-The `DBSIZE` command is a simple yet powerful tool for monitoring the number of keys in your DiceDB database. It is efficient and easy to use, providing valuable insights into the size of your data store. By understanding the number of keys, you can make informed decisions about database management and optimization.
-

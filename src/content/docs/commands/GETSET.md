@@ -1,11 +1,7 @@
 ---
 title: GETSET
-description: Documentation for the Redis command GETSET
+description: Documentation for the DiceDB command GETSET
 ---
-
-# DiceDB Command: GETSET
-
-## Overview
 
 The `GETSET` command in DiceDB is a powerful atomic operation that combines the functionality of `GET` and `SET` commands. It retrieves the current value of a key and simultaneously sets a new value for that key. This command is particularly useful when you need to update a value and also need to know the previous value in a single atomic operation.
 

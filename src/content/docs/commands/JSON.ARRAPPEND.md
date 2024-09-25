@@ -1,11 +1,7 @@
 ---
 title: JSON.ARRAPPEND
-description: Documentation for the Redis command JSON.ARRAPPEND
+description: Documentation for the DiceDB command JSON.ARRAPPEND
 ---
-
-# DiceDB Command: JSON.ARRAPPEND
-
-## Overview
 
 The `JSON.ARRAPPEND` command in DiceDB is used to append one or more JSON values to the end of a JSON array located at a specified path within a JSON document. This command is part of the DiceDBJSON module, which provides native JSON capabilities in DiceDB.
 

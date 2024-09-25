@@ -1,11 +1,7 @@
 ---
 title: LLEN
-description: Documentation for the Redis command LLEN
+description: Documentation for the DiceDB command LLEN
 ---
-
-# DiceDB Command: LLEN
-
-## Overview
 
 The `LLEN` command in DiceDB is used to obtain the length of a list stored at a specified key. This command is particularly useful for determining the number of elements in a list, which can help in various list management and processing tasks.
 

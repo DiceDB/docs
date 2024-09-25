@@ -1,11 +1,7 @@
 ---
 title: JSON.FORGET
-description: Documentation for the Redis command JSON.FORGET
+description: Documentation for the DiceDB command JSON.FORGET
 ---
-
-# DiceDB Command: JSON.FORGET
-
-## Overview
 
 The `JSON.FORGET` command is part of the DiceDBJSON module, which allows you to manipulate JSON data stored in DiceDB. This command is used to delete a specified path from a JSON document stored at a given key. If the path leads to an array element, the element is removed, and the array is reindexed.
 

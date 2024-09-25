@@ -1,11 +1,7 @@
 ---
 title: JSON.MSET
-description: Documentation for the Redis command JSON.MSET
+description: Documentation for the DiceDB command JSON.MSET
 ---
-
-# DiceDB Command: JSON.MSET
-
-## Overview
 
 The `JSON.MSET` command in DiceDB is used to set multiple JSON values at once. This command is particularly useful when you need to update several keys with JSON data in a single atomic operation, ensuring that all updates are applied together.
 

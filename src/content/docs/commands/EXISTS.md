@@ -1,11 +1,7 @@
 ---
 title: EXISTS
-description: Documentation for the Redis command EXISTS
+description: Documentation for the DiceDB command EXISTS
 ---
-
-# DiceDB EXISTS Command Documentation
-
-## Overview
 
 The `EXISTS` command in DiceDB is used to determine if one or more keys exist in the database. This command is useful for checking the presence of keys before performing operations that depend on their existence.
 
@@ -91,8 +87,3 @@ EXISTS nonExistentKey
 ```
 
 In this example, the key `nonExistentKey` does not exist, so the command returns `0`.
-
-## Conclusion
-
-The `EXISTS` command is a simple yet powerful tool for checking the presence of keys in a DiceDB database. It is efficient and can handle multiple keys in a single command, making it a versatile option for various use cases. Understanding its behavior and error handling can help you use this command effectively in your DiceDB operations.
-

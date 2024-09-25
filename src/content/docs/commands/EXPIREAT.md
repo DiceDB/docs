@@ -1,11 +1,7 @@
 ---
 title: EXPIREAT
-description: Documentation for the Redis command EXPIREAT
+description: Documentation for the DiceDB command EXPIREAT
 ---
-
-# DiceDB Command: EXPIREAT
-
-## Overview
 
 The `EXPIREAT` command is used to set the expiration time of a key in DiceDB. Unlike the `EXPIRE` command, which sets the expiration time in seconds from the current time, `EXPIREAT` sets the expiration time as an absolute Unix timestamp (in seconds). This allows for more precise control over when a key should expire.
 

@@ -1,11 +1,7 @@
 ---
 title: SMEMBERS
-description: Documentation for the Redis command SMEMBERS
+description: Documentation for the DiceDB command SMEMBERS
 ---
-
-# DiceDB Command: SMEMBERS
-
-## Overview
 
 The `SMEMBERS` command in DiceDB is used to retrieve all the members of a set stored at a specified key. Sets in DiceDB are unordered collections of unique strings. This command is useful for obtaining the entire set of elements for further processing or inspection.
 

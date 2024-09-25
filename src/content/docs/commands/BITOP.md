@@ -1,11 +1,7 @@
 ---
 title: BITOP
-description: Documentation for the Redis command BITOP
+description: Documentation for the DiceDB command BITOP
 ---
-
-# DiceDB BITOP Command Documentation
-
-## Overview
 
 The `BITOP` command in DiceDB is used to perform bitwise operations between strings. This command supports several bitwise operations such as AND, OR, XOR, and NOT. The result of the operation is stored in a destination key.
 
@@ -123,8 +119,3 @@ GET result
 - `SET key1 "foo"`: Sets the value of `key1` to "foo".
 - `BITOP NOT result key1`: Performs a bitwise NOT operation on the value of `key1`, and stores the result in `result`.
 - `GET result`: Retrieves the value of `result`.
-
-## Conclusion
-
-The `BITOP` command is a powerful tool for performing bitwise operations on strings in DiceDB. By understanding its parameters, return values, and behavior, you can effectively utilize this command in your DiceDB-based applications. Always handle errors appropriately to ensure robust and reliable code.
-

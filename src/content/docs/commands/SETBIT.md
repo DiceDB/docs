@@ -1,11 +1,7 @@
 ---
 title: SETBIT
-description: Documentation for the Redis command SETBIT
+description: Documentation for the DiceDB command SETBIT
 ---
-
-# DiceDB Command: SETBIT
-
-## Overview
 
 The `SETBIT` command in DiceDB is used to set or clear the bit at a specified offset in the string value stored at a given key. This command is particularly useful for bitwise operations and can be used to implement various data structures and algorithms efficiently.
 

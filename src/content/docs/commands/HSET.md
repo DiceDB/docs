@@ -1,11 +1,7 @@
 ---
 title: HSET
-description: Documentation for the Redis command HSET
+description: Documentation for the DiceDB command HSET
 ---
-
-# DiceDB Command: HSET
-
-## Overview
 
 The `HSET` command in DiceDB is used to set the value of a field in a hash. If the hash does not exist, a new hash is created. If the field already exists in the hash, the value is updated. This command is useful for managing and storing key-value pairs within a hash data structure.
 

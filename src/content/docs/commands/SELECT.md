@@ -1,11 +1,7 @@
 ---
 title: SELECT
-description: Documentation for the Redis command SELECT
+description: Documentation for the DiceDB command SELECT
 ---
-
-# DiceDB Command: SELECT
-
-## Overview
 
 The `SELECT` command is used to switch the currently selected database for the current connection in DiceDB. By default, DiceDB starts with database 0, but it supports multiple databases, which can be accessed by using the `SELECT` command. This command is essential for managing data across different logical databases within a single DiceDB instance.
 

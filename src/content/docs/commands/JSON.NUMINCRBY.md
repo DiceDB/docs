@@ -1,11 +1,7 @@
 ---
 title: JSON.NUMINCRBY
-description: Documentation for the Redis command JSON.NUMINCRBY
+description: Documentation for the DiceDB command JSON.NUMINCRBY
 ---
-
-# DiceDB Command: JSON.NUMINCRBY
-
-## Overview
 
 The `JSON.NUMINCRBY` command is part of the DiceDBJSON module, which allows for manipulation of JSON data stored in DiceDB. This command increments a numeric value stored at a specified path within a JSON document by a given amount. It is particularly useful for atomic operations on numeric fields within JSON objects.
 

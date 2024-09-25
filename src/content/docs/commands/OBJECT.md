@@ -1,11 +1,7 @@
 ---
 title: OBJECT
-description: Documentation for the Redis command OBJECT
+description: Documentation for the DiceDB command OBJECT
 ---
-
-# DiceDB OBJECT Command Documentation
-
-## Overview
 
 The `OBJECT` command in DiceDB is used to inspect the internals of DiceDB objects. It provides various subcommands that allow you to retrieve information about the encoding, reference count, and idle time of a key. This command is particularly useful for debugging and understanding the memory usage and performance characteristics of your DiceDB instance.
 

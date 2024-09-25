@@ -1,11 +1,7 @@
 ---
 title: FLUSHDB
-description: Documentation for the Redis command FLUSHDB
+description: Documentation for the DiceDB command FLUSHDB
 ---
-
-# DiceDB Command: FLUSHDB
-
-## Overview
 
 The `FLUSHDB` command is used to remove all keys from the currently selected database in a DiceDB instance. This command is useful when you need to clear all the data in a specific database without affecting other databases in the same DiceDB instance.
 

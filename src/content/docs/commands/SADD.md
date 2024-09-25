@@ -1,11 +1,7 @@
 ---
 title: SADD
-description: Documentation for the Redis command SADD
+description: Documentation for the DiceDB command SADD
 ---
-
-# DiceDB Command: SADD
-
-## Overview
 
 The `SADD` command in DiceDB is used to add one or more members to a set stored at a specified key. If the specified key does not exist, a new set is created before adding the members. Members that are already present in the set are ignored. This command is useful for maintaining collections of unique elements.
 

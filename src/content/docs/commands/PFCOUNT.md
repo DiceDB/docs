@@ -1,11 +1,7 @@
 ---
 title: PFCOUNT
-description: Documentation for the Redis command PFCOUNT
+description: Documentation for the DiceDB command PFCOUNT
 ---
-
-# DiceDB Command: PFCOUNT
-
-## Overview
 
 The `PFCOUNT` command in DiceDB is used to return the approximate cardinality (i.e., the number of unique elements) of the set(s) stored in the specified HyperLogLog data structure(s). HyperLogLog is a probabilistic data structure used for estimating the cardinality of a set with a high degree of accuracy and minimal memory usage.
 

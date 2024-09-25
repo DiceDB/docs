@@ -1,11 +1,7 @@
 ---
 title: GETEX
-description: Documentation for the Redis command GETEX
+description: Documentation for the DiceDB command GETEX
 ---
-
-# DiceDB Command: GETEX
-
-## Overview
 
 The `GETEX` command in DiceDB is used to retrieve the value of a specified key and simultaneously set its expiration time. This command is particularly useful when you want to access the value of a key and ensure that it expires after a certain period, all in a single atomic operation.
 

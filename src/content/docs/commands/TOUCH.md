@@ -1,11 +1,7 @@
 ---
 title: TOUCH
-description: Documentation for the Redis command TOUCH
+description: Documentation for the DiceDB command TOUCH
 ---
-
-# DiceDB TOUCH Command Documentation
-
-## Overview
 
 The `TOUCH` command in DiceDB is used to update the last access time of one or more keys without modifying their values. This can be particularly useful for cache management, where you want to keep certain keys from expiring by marking them as recently used.
 

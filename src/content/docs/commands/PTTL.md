@@ -1,11 +1,7 @@
 ---
 title: PTTL
-description: Documentation for the Redis command PTTL
+description: Documentation for the DiceDB command PTTL
 ---
-
-# DiceDB Command: PTTL
-
-## Overview
 
 The `PTTL` command in DiceDB is used to retrieve the remaining time to live (TTL) of a key in milliseconds. This command is particularly useful for understanding how much longer a key will exist before it expires. If the key does not have an associated expiration, the command will return a specific value indicating this state.
 

@@ -1,11 +1,7 @@
 ---
 title: LPUSH
-description: Documentation for the Redis command LPUSH
+description: Documentation for the DiceDB command LPUSH
 ---
-
-# DiceDB Command: LPUSH
-
-## Overview
 
 The `LPUSH` command is used to insert one or multiple values at the head (left) of a list stored at a specified key. If the key does not exist, a new list is created before performing the push operations. If the key exists but is not a list, an error is returned.
 

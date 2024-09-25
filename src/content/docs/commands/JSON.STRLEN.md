@@ -1,11 +1,7 @@
 ---
 title: JSON.STRLEN
-description: Documentation for the Redis command JSON.STRLEN
+description: Documentation for the DiceDB command JSON.STRLEN
 ---
-
-# DiceDB Command: JSON.STRLEN
-
-## Overview
 
 The `JSON.STRLEN` command is part of the DiceDBJSON module, which allows you to work with JSON data in DiceDB. This command is used to determine the length of a JSON string at a specified path within a JSON document stored in DiceDB.
 

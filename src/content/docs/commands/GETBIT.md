@@ -1,11 +1,7 @@
 ---
 title: GETBIT
-description: Documentation for the Redis command GETBIT
+description: Documentation for the DiceDB command GETBIT
 ---
-
-# DiceDB Command: GETBIT
-
-## Overview
 
 The `GETBIT` command is used to retrieve the bit value at a specified offset in the string value stored at a given key. This command is particularly useful for bitwise operations and managing binary data within DiceDB.
 

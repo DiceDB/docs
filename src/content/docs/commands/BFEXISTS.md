@@ -1,13 +1,9 @@
 ---
 title: BFEXISTS
-description: Documentation for the Redis command BFEXISTS
+description: Documentation for the DiceDB command BFEXISTS
 ---
 
-# DiceDB Command: BFEXISTS
-
-## Overview
-
-The `BFEXISTS` command is part of the DiceDBBloom module, which provides a Bloom Filter data structure. A Bloom Filter is a probabilistic data structure that is used to test whether an element is a member of a set. It is highly space-efficient but allows for a small probability of false positives. The `BFEXISTS` command checks whether a specified item may exist in the Bloom Filter.
+A Bloom Filter is a probabilistic data structure that is used to test whether an element is a member of a set. It is highly space-efficient but allows for a small probability of false positives. The `BFEXISTS` command checks whether a specified item may exist in the Bloom Filter.
 
 ## Syntax
 
@@ -89,8 +85,3 @@ In this example, the key `myString` is associated with a string value, not a Blo
 ```
 
 In this example, the command is called with an incorrect number of arguments. The command raises an `ERR wrong number of arguments` error.
-
-## Conclusion
-
-The `BFEXISTS` command is a useful tool for checking the potential existence of an item in a Bloom Filter. It is important to understand the probabilistic nature of Bloom Filters and handle the command's return values and potential errors appropriately. This documentation provides a comprehensive guide to using the `BFEXISTS` command effectively.
-

@@ -1,11 +1,7 @@
 ---
 title: RPUSH
-description: Documentation for the Redis command RPUSH
+description: Documentation for the DiceDB command RPUSH
 ---
-
-# RPUSH Command Documentation
-
-## Overview
 
 The `RPUSH` command is used in DiceDB to insert one or multiple values at the tail (right end) of a list. If the list does not exist, it is created as an empty list before performing the push operations. This command is useful for maintaining a list of elements where new elements are added to the end of the list.
 

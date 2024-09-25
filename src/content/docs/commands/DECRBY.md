@@ -1,11 +1,7 @@
 ---
 title: DECRBY
-description: Documentation for the Redis command DECRBY
+description: Documentation for the DiceDB command DECRBY
 ---
-
-# DiceDB Command: DECRBY
-
-## Overview
 
 The `DECRBY` command in DiceDB is used to decrement the integer value of a key by a specified amount. This command is useful for scenarios where you need to decrease a counter or a numeric value stored in a key.
 

@@ -1,11 +1,7 @@
 ---
 title: EXPIRETIME
-description: Documentation for the Redis command EXPIRETIME
+description: Documentation for the DiceDB command EXPIRETIME
 ---
-
-# DiceDB Command: EXPIRETIME
-
-## Overview
 
 The `EXPIRETIME` command in DiceDB is used to retrieve the absolute Unix timestamp (in seconds) at which a given key will expire. This command is particularly useful for understanding the exact expiration time of a key, which can help in debugging and managing key lifetimes.
 

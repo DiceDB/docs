@@ -1,11 +1,7 @@
 ---
 title: SCARD
-description: Documentation for the Redis command SCARD
+description: Documentation for the DiceDB command SCARD
 ---
-
-# DiceDB SCARD Command Documentation
-
-## Overview
 
 The `SCARD` command in DiceDB is used to get the number of members in a set. This command is useful for determining the size of a set stored at a given key.
 

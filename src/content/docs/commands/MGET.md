@@ -1,11 +1,7 @@
 ---
 title: MGET
-description: Documentation for the Redis command MGET
+description: Documentation for the DiceDB command MGET
 ---
-
-# DiceDB Command: MGET
-
-## Overview
 
 The `MGET` command in DiceDB is used to retrieve the values of multiple keys in a single call. This command is particularly useful for reducing the number of round trips between the client and the server when you need to fetch multiple values.
 

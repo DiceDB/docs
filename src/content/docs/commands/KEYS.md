@@ -1,11 +1,7 @@
 ---
 title: KEYS
-description: Documentation for the Redis command KEYS
+description: Documentation for the DiceDB command KEYS
 ---
-
-# DiceDB KEYS Command Documentation
-
-## Overview
 
 The `KEYS` command in DiceDB is used to find all keys matching a given pattern. This command is useful for retrieving keys that match a specific pattern, which can be helpful for debugging or managing your DiceDB data.
 

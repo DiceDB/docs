@@ -1,11 +1,7 @@
 ---
 title: JSON.ARRLEN
-description: Documentation for the Redis command JSON.ARRLEN
+description: Documentation for the DiceDB command JSON.ARRLEN
 ---
-
-# DiceDB Command: JSON.ARRLEN
-
-## Overview
 
 The `JSON.ARRLEN` command is part of the DiceDBJSON module, which allows you to work with JSON data structures in DiceDB. This command is used to retrieve the length of a JSON array at a specified path within a JSON document.
 

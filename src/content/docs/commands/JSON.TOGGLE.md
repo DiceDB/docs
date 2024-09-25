@@ -1,11 +1,7 @@
 ---
 title: JSON.TOGGLE
-description: Documentation for the Redis command JSON.TOGGLE
+description: Documentation for the DiceDB command JSON.TOGGLE
 ---
-
-# JSON.TOGGLE Command Documentation
-
-## Overview
 
 The `JSON.TOGGLE` command is part of the DiceDBJSON module, which allows you to manipulate JSON data stored in DiceDB. This command is used to toggle the boolean value at a specified path within a JSON document. If the value at the specified path is `true`, it will be changed to `false`, and vice versa.
 

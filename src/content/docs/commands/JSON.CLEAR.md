@@ -1,11 +1,7 @@
 ---
 title: JSON.CLEAR
-description: Documentation for the Redis command JSON.CLEAR
+description: Documentation for the DiceDB command JSON.CLEAR
 ---
-
-# DiceDB Command: JSON.CLEAR
-
-## Overview
 
 The `JSON.CLEAR` command is part of the DiceDBJSON module, which allows you to manipulate JSON data stored in DiceDB. This command is used to clear the value at a specified path in a JSON document, effectively setting it to an empty state. This can be particularly useful when you want to reset a part of your JSON document without removing the key itself.
 

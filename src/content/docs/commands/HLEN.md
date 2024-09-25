@@ -1,11 +1,7 @@
 ---
 title: HLEN
-description: Documentation for the Redis command HLEN
+description: Documentation for the DiceDB command HLEN
 ---
-
-# DiceDB Command: HLEN
-
-## Overview
 
 The `HLEN` command in DiceDB is used to obtain the number of fields contained within a hash stored at a specified key. This command is particularly useful for understanding the size of a hash and for performing operations that depend on the number of fields in a hash.
 

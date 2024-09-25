@@ -1,11 +1,7 @@
 ---
 title: SREM
-description: Documentation for the Redis command SREM
+description: Documentation for the DiceDB command SREM
 ---
-
-# DiceDB Command: SREM
-
-## Overview
 
 The `SREM` command is used to remove one or more members from a set stored at a specified key. If the specified members are not present in the set, they are ignored. If the key does not exist, it is treated as an empty set and the command returns 0. This command is idempotent, meaning that removing a member that does not exist in the set has no effect.
 

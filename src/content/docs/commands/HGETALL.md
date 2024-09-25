@@ -1,11 +1,7 @@
 ---
 title: HGETALL
-description: Documentation for the Redis command HGETALL
+description: Documentation for the DiceDB command HGETALL
 ---
-
-# DiceDB Command: HGETALL
-
-## Overview
 
 The `HGETALL` command in DiceDB is used to retrieve all the fields and values of a hash stored at a specified key. This command is particularly useful when you need to fetch the entire hash in one go, rather than fetching individual fields one by one.
 

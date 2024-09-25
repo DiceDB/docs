@@ -1,11 +1,7 @@
 ---
 title: PFMERGE
-description: Documentation for the Redis command PFMERGE
+description: Documentation for the DiceDB command PFMERGE
 ---
-
-# DiceDB Command: PFMERGE
-
-## Overview
 
 The `PFMERGE` command in DiceDB is used to merge multiple HyperLogLog data structures into a single HyperLogLog. HyperLogLog is a probabilistic data structure used for estimating the cardinality of a set, i.e., the number of unique elements in a dataset. This command is particularly useful when you have multiple HyperLogLogs and you want to combine them to get an estimate of the total unique elements across all of them.
 

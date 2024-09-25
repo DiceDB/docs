@@ -1,11 +1,7 @@
 ---
 title: LPOP
-description: Documentation for the Redis command LPOP
+description: Documentation for the DiceDB command LPOP
 ---
-
-# DiceDB Command: LPOP
-
-## Overview
 
 The `LPOP` command is used to remove and return the first element of a list stored at a specified key in DiceDB. This command is useful for implementing queue-like structures where elements are processed in a First-In-First-Out (FIFO) order.
 

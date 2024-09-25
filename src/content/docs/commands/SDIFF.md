@@ -1,6 +1,6 @@
 ---
 title: SDIFF
-description: Documentation for the Redis command SDIFF
+description: Documentation for the DiceDB command SDIFF
 ---
 
 # DiceDB Command: SDIFF

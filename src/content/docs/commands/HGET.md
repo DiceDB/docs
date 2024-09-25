@@ -1,11 +1,7 @@
 ---
 title: HGET
-description: Documentation for the Redis command HGET
+description: Documentation for the DiceDB command HGET
 ---
-
-# DiceDB Command: HGET
-
-## Overview
 
 The `HGET` command in DiceDB is used to retrieve the value associated with a specified field within a hash stored at a given key. If the key or the field does not exist, the command returns a `nil` value.
 

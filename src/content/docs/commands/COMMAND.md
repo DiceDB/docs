@@ -1,11 +1,7 @@
 ---
 title: COMMAND
-description: Documentation for the Redis command COMMAND
+description: Documentation for the DiceDB command COMMAND
 ---
-
-# DiceDB `COMMAND` Command Documentation
-
-## Overview
 
 The `COMMAND` command in DiceDB is a powerful introspection tool that provides detailed information about all the DiceDB commands supported by the server. This command can be used to retrieve metadata about commands, such as their arity, flags, first key, last key, and key step. It is particularly useful for clients and developers who need to understand the capabilities and constraints of the DiceDB commands available in their environment.
 
@@ -194,8 +190,3 @@ The `COMMAND` command can raise errors in the following scenarios:
 > COMMAND GETKEYS set
 (error) ERR wrong number of arguments for 'set' command
 ```
-
-## Conclusion
-
-The `COMMAND` command in DiceDB is a versatile tool for introspection and understanding the capabilities of the DiceDB server. By providing detailed metadata about commands, it aids developers and clients in optimizing their interactions with DiceDB. Proper error handling ensures that users are informed of any issues with their requests, making the `COMMAND` command both powerful and user-friendly.
-

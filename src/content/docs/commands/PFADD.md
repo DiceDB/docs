@@ -1,11 +1,7 @@
 ---
 title: PFADD
-description: Documentation for the Redis command PFADD
+description: Documentation for the DiceDB command PFADD
 ---
-
-# DiceDB Command: PFADD
-
-## Overview
 
 The `PFADD` command in DiceDB is used to add elements to a HyperLogLog data structure. HyperLogLog is a probabilistic data structure used for estimating the cardinality of a set, i.e., the number of unique elements in a dataset. The `PFADD` command helps in maintaining this data structure by adding new elements to it.
 

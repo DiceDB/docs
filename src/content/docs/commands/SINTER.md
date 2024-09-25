@@ -1,11 +1,7 @@
 ---
 title: SINTER
-description: Documentation for the Redis command SINTER
+description: Documentation for the DiceDB command SINTER
 ---
-
-# DiceDB Command: SINTER
-
-## Overview
 
 The `SINTER` command in DiceDB is used to compute the intersection of multiple sets. This command returns the members that are common to all the specified sets. If any of the sets do not exist, they are considered to be empty sets. The result of the intersection will be an empty set if at least one of the sets is empty.
 

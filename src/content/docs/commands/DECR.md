@@ -1,11 +1,7 @@
 ---
 title: DECR
-description: Documentation for the Redis command DECR
+description: Documentation for the DiceDB command DECR
 ---
-
-# DiceDB DECR Command Documentation
-
-## Overview
 
 The `DECR` command in DiceDB is used to decrement the integer value of a key by one. If the key does not exist, it is set to 0 before performing the decrement operation. This command is useful for counters and other numerical operations where you need to decrease the value stored at a specific key.
 
@@ -115,8 +111,3 @@ DECR mycounter
 ```plaintext
 (error) ERR increment or decrement would overflow
 ```
-
-## Conclusion
-
-The `DECR` command is a straightforward and efficient way to decrement the value of a key in DiceDB. It is essential to ensure that the key holds a value that can be interpreted as an integer to avoid errors. Proper error handling should be implemented to manage scenarios where the value is not an integer or when an overflow occurs.
-

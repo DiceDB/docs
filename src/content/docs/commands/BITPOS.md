@@ -1,11 +1,7 @@
 ---
 title: BITPOS
-description: Documentation for the Redis command BITPOS
+description: Documentation for the DiceDB command BITPOS
 ---
-
-# DiceDB BITPOS Command Documentation
-
-## Overview
 
 The `BITPOS` command in DiceDB is used to find the position of the first bit set to 1 or 0 in a string. This command is particularly useful for efficiently locating the first occurrence of a bit in a binary string stored in a DiceDB key.
 
@@ -140,8 +136,3 @@ BITPOS mykey 1 "a" "b"
 ```plaintext
 (error) ERR value is not an integer or out of range
 ```
-
-## Conclusion
-
-The `BITPOS` command is a powerful tool for efficiently locating the first occurrence of a bit in a binary string stored in DiceDB. By understanding its parameters, return values, and potential error cases, you can effectively utilize this command in your DiceDB operations.
-

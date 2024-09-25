@@ -1,11 +1,7 @@
 ---
 title: PERSIST
-description: Documentation for the Redis command PERSIST
+description: Documentation for the DiceDB command PERSIST
 ---
-
-# DiceDB Command: PERSIST
-
-## Overview
 
 The `PERSIST` command is used to remove the expiration from a key in DiceDB. If a key is set to expire after a certain amount of time, using the `PERSIST` command will make the key persistent, meaning it will no longer have an expiration time and will remain in the database until explicitly deleted.
 

@@ -1,11 +1,7 @@
 ---
 title: BITCOUNT
-description: Documentation for the Redis command BITCOUNT
+description: Documentation for the DiceDB command BITCOUNT
 ---
-
-# DiceDB BITCOUNT Command Documentation
-
-## Overview
 
 The `BITCOUNT` command in DiceDB is used to count the number of set bits (i.e., bits with value 1) in a string. This command is particularly useful for applications that need to perform bitwise operations and analyze binary data stored in DiceDB.
 
@@ -123,8 +119,3 @@ In this example, the command counts the bits set to 1 in the bytes from position
 
 - The `start` and `end` parameters are byte positions, not bit positions.
 - Negative values for `start` and `end` are interpreted as offsets from the end of the string. For example, -1 means the last byte, -2 means the second last byte, and so on.
-
-## Conclusion
-
-The `BITCOUNT` command is a powerful tool for counting the number of set bits in a string stored in DiceDB. By understanding its parameters, return values, and error handling, you can effectively utilize this command in your applications to perform bitwise operations and analyze binary data.
-

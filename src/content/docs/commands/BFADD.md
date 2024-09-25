@@ -1,13 +1,9 @@
 ---
 title: BFADD
-description: Documentation for the Redis command BFADD
+description: Documentation for the DiceDB command BFADD
 ---
 
-# DiceDB Command: BFADD
-
-## Overview
-
-The `BFADD` command is part of the DiceDBBloom module, which provides a Bloom Filter data structure. A Bloom Filter is a probabilistic data structure that is used to test whether an element is a member of a set. It is highly space-efficient but allows for a small probability of false positives. The `BFADD` command is used to add an element to a Bloom Filter.
+A Bloom Filter is a probabilistic data structure that is used to test whether an element is a member of a set. It is highly space-efficient but allows for a small probability of false positives. The `BFADD` command is used to add an element to a Bloom Filter.
 
 ## Syntax
 
@@ -75,8 +71,3 @@ In this example, the command is called with only one argument instead of the req
 ```
 
 In this example, the key and item are non-string values. An error is raised indicating the wrong type of value.
-
-## Conclusion
-
-The `BFADD` command is a powerful tool for managing Bloom Filters in DiceDB. It allows for efficient membership testing with a small probability of false positives. By understanding its parameters, return values, and error handling, you can effectively utilize this command in your DiceDB applications.
-

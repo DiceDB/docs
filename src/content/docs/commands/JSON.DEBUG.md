@@ -1,11 +1,7 @@
 ---
 title: JSON.DEBUG
-description: Documentation for the Redis command JSON.DEBUG
+description: Documentation for the DiceDB command JSON.DEBUG
 ---
-
-# DiceDB Command: JSON.DEBUG
-
-## Overview
 
 The `JSON.DEBUG` command in DiceDB is part of the DiceDBJSON module, which allows for the manipulation and querying of JSON data stored in DiceDB. This command is primarily used for debugging purposes, providing insights into the internal representation of JSON data within DiceDB.
 

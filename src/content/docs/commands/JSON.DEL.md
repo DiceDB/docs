@@ -1,11 +1,7 @@
 ---
 title: JSON.DEL
-description: Documentation for the Redis command JSON.DEL
+description: Documentation for the DiceDB command JSON.DEL
 ---
-
-# JSON.DEL Command Documentation
-
-## Overview
 
 The `JSON.DEL` command is part of the DiceDBJSON module, which allows you to manipulate JSON data stored in DiceDB. This command is used to delete a specified path from a JSON document stored at a given key. If the path is not specified, the entire JSON document will be deleted.
 

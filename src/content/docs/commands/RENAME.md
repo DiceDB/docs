@@ -1,11 +1,7 @@
 ---
 title: RENAME
-description: Documentation for the Redis command RENAME
+description: Documentation for the DiceDB command RENAME
 ---
-
-# RENAME Command Documentation
-
-## Overview
 
 The `RENAME` command in DiceDB is used to change the name of an existing key to a new name. If the new key name already exists, it will be overwritten. This command is useful for renaming keys in a DiceDB database without having to delete and recreate them.
 

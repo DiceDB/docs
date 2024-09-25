@@ -1,11 +1,7 @@
 ---
 title: GETDEL
-description: Documentation for the Redis command GETDEL
+description: Documentation for the DiceDB command GETDEL
 ---
-
-# DiceDB Command: GETDEL
-
-## Overview
 
 The `GETDEL` command in DiceDB is used to retrieve the value of a specified key and then delete the key from the database. This command is useful when you need to fetch a value and ensure that it is removed from the database in a single atomic operation.
 

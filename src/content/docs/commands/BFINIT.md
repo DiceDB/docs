@@ -1,13 +1,9 @@
 ---
 title: BFINIT
-description: Documentation for the Redis command BFINIT
+description: Documentation for the DiceDB command BFINIT
 ---
 
-# DiceDB Command: BFINIT
-
-## Overview
-
-The `BFINIT` command is used to initialize a new Bloom Filter in DiceDB. A Bloom Filter is a probabilistic data structure that is used to test whether an element is a member of a set. It is highly space-efficient but allows for a small probability of false positives.
+A Bloom Filter is a probabilistic data structure that is used to test whether an element is a member of a set. It is highly space-efficient but allows for a small probability of false positives. The `BFINIT` command is used to initialize a new Bloom Filter.
 
 ## Syntax
 
@@ -92,8 +88,3 @@ This command will result in an error because the initial capacity is not a valid
 ```plaintext
 (error) ERR invalid initial capacity
 ```
-
-## Conclusion
-
-The `BFINIT` command is a powerful tool for initializing Bloom Filters in DiceDB. By understanding its parameters, return values, and error handling, you can effectively use this command to manage probabilistic data structures in your DiceDB database.
-
