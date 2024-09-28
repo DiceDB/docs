@@ -1,6 +1,6 @@
 ---
-title: 'Hello, World'
-description: 'DiceDB is being revived with a bold new mission: to optimize and build a database that truly meets the demands of real-time applications. The world of real-time systems, both frontend and backend, is evolving rapidly, and so must the tools that underpin them. DiceDB will offer a robust and performant database solution specifically engineered for building and scaling real-time applications.'
+title: "Hello, World"
+description: "DiceDB is being revived with a bold new mission: to optimize and build a database that truly meets the demands of real-time applications. The world of real-time systems, both frontend and backend, is evolving rapidly, and so must the tools that underpin them. DiceDB will offer a robust and performant database solution specifically engineered for building and scaling real-time applications."
 published_at: 2024-06-02
 author: arpit
 ---

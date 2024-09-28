@@ -1,39 +1,49 @@
 ---
-import { Github, MoveRight } from 'lucide-astro'
-import Dice from './Dice.astro'
+import { Github, MoveRight } from "lucide-astro";
+import Dice from "./Dice.astro";
+import site from "../data/site.json";
 ---
-
 
 <div id="hero" class="hero">
   <div class="hero-body">
     <div class="columns is-vcentered">
       <div class="column is-7 has-text-left">
-        <!-- <div style="margin-bottom: 2em;">
-          <a class="button is-info is-light" href="/">
-            <span>DiceDB 0.0.2 is out and we have shipped real-time reactivity. Details →</span>
-          </a>
-        </div> -->
+        <a class="button" href="/blog/dicedb-004-release-notes">
+          <span>We shipped DiceDB v0.0.4</span>
+          <span class="icon"><MoveRight /></span>
+        </a>
         <div class="image is-128x128">
           <img src="/icon.png" alt="DiceDB Logo" />
         </div>
         <br />
-        <h1 class="title is-size-1">Real-time at Warp Speed</h1>
-        <p class="subtitle is-size-5">DiceDB is an in-memory real-time database with SQL-based reactivity.</p>
-        <br />
+        <h1 class="title is-size-1">Build truly real-time applications</h1>
+        <!-- <p class="subtitle is-size-5">
+          DiceDB is an in-memory real-time database with native support for push.
+          It is a drop-in replacement of Redis with a powerful SQL-based query engine.
+          The query engine allows you to subscribe to a query and upon some change
+          in data the output is streamed to the client. 
+        </p> -->
         <div class="buttons is-large">
-          <a href="/get-started/installation/" class="button is-primary is-medium">
+          <a
+            href="/get-started/installation/"
+            class="button is-primary is-medium"
+          >
             <strong>Get Started →</strong>
           </a>
           <a
-              class="button is-medium"
-              target="_blank"
-              href="https://github.com/dicedb/dice"
-              title="DiceDB source code on GitHub"
-            >
-              <span class="icon"><Github /></span>
-              <span>GitHub (4k)</span>
-            </a>
+            class="button is-medium"
+            target="_blank"
+            href="https://github.com/dicedb/dice"
+            title="DiceDB source code on GitHub"
+          >
+            <span class="icon"><Github /></span>
+            <span>GitHub (4k+)</span>
+          </a>
         </div>
+        <p class="has-text-grey">
+          Want to evaluate and adopt DiceDB at your org?
+          <a href={site.calendar_url} target="_blank">block our calendar</a>.
+        </p>
       </div>
       <div class="column is-1"></div>
       <div class="column is-4 is-hidden-mobile">

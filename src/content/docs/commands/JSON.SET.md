@@ -27,10 +27,10 @@ JSON.SET <key> <path> <json> [NX | XX]
 
 `JSON.SET` leverages the powerful JSONPath syntax to accurately pinpoint the target location for value insertion or modification. Key JSONPath concepts include:
 
-* Root: Represented by `$`, indicates the root of the JSON document.
-* Child Operators:
-  * `.`: Accesses object properties.
-  * `[]`: Accesses array elements.
+- Root: Represented by `$`, indicates the root of the JSON document.
+- Child Operators:
+  - `.`: Accesses object properties.
+  - `[]`: Accesses array elements.
 
 ## Behaviour
 

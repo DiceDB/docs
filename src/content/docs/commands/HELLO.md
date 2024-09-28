@@ -90,4 +90,3 @@ Switch to protocol version 3, authenticate, and set the client name:
 - The `HELLO` command can be used to switch between RESP2 and RESP3 protocols dynamically.
 
 By understanding and utilizing the `HELLO` command, clients can effectively manage their connection settings and ensure proper communication with the DiceDB server.
-
