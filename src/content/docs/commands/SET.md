@@ -8,7 +8,7 @@ The `SET` command in DiceDB is used to set the value of a key. If the key alread
 ## Syntax
 
 ```
-SET key value [EX seconds | PX milliseconds] [NX | XX] [KEEPTTL]
+SET key value [EX seconds | PX milliseconds | EXAT unix-time-seconds | PXAT unix-time-milliseconds | KEEPTTL] [NX | XX]
 ```
 
 ## Parameters
@@ -18,7 +18,9 @@ SET key value [EX seconds | PX milliseconds] [NX | XX] [KEEPTTL]
 | `key`           | The name of the key to be set.                   | String  | Yes      |
 | `value`         | The value to be set for the key.                 | String  | Yes      |
 | `EX`            | Set the specified expire time, in seconds.       | Integer | No       |
+| `EXAT`          | Set the specified Unix time at which the key will expire, in seconds  | Integer | No       |
 | `PX`            | Set the specified expire time, in milliseconds.  | Integer | No       |
+| `PXAT`          | Set the specified Unix time at which the key will expire, in milliseconds  | Integer | No       |
 | `NX`            | Only set the key if it does not already exist.   | None    | No       |
 | `XX`            | Only set the key if it already exists.           | None    | No       |
 | `KEEPTTL`       | Retain the time-to-live associated with the key. | None    | No       |
@@ -36,7 +38,7 @@ SET key value [EX seconds | PX milliseconds] [NX | XX] [KEEPTTL]
 - If the specified key already exists, the `SET` command will overwrite the existing key-value pair with the new value unless the `NX` option is provided.
 - If the `NX` option is present, the command will set the key only if it does not already exist. If the key exists, no operation is performed and `nil` is returned.
 - If the `XX` option is present, the command will set the key only if it already exists. If the key does not exist, no operation is performed and `nil` is returned.
-- Using the `EX` or `PX` options together with `KEEPTTL` is not allowed and will result in an error.
+- Using the `EX`, `EXAT`, `PX` or `PXAT` options together with `KEEPTTL` is not allowed and will result in an error.
 - When provided, `EX` sets the expiry time in seconds and `PX` sets the expiry time in milliseconds.
 - The `KEEPTTL` option ensures that the key's existing TTL is retained.
 
