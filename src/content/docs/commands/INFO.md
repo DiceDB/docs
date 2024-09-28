@@ -9,18 +9,18 @@ The `INFO` command in DiceDB is used to retrieve information and statistics abou
 
 ### Optional Section Parameter
 
-  - `section`: (Optional) A string specifying the section of information to retrieve. If no section is specified, the command returns all sections. The available sections are:
-  - `server`: General information about the DiceDB server.
-  - `clients`: Client connections information.
-  - `memory`: Memory usage information.
-  - `persistence`: Information about RDB and AOF persistence.
-  - `stats`: General statistics.
-  - `replication`: Master/slave replication information.
-  - `cpu`: CPU usage statistics.
-  - `commandstats`: Command statistics.
-  - `cluster`: DiceDB Cluster information.
-  - `keyspace`: Database keyspace statistics.
-  - `modules`: Information about loaded modules.
+- `section`: (Optional) A string specifying the section of information to retrieve. If no section is specified, the command returns all sections. The available sections are:
+- `server`: General information about the DiceDB server.
+- `clients`: Client connections information.
+- `memory`: Memory usage information.
+- `persistence`: Information about RDB and AOF persistence.
+- `stats`: General statistics.
+- `replication`: Master/slave replication information.
+- `cpu`: CPU usage statistics.
+- `commandstats`: Command statistics.
+- `cluster`: DiceDB Cluster information.
+- `keyspace`: Database keyspace statistics.
+- `modules`: Information about loaded modules.
 
 ## Return Value
 

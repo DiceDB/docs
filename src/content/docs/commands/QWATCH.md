@@ -1,7 +1,6 @@
 ---
 title: QWATCH
 description: The `QWATCH` command is a novel feature designed to provide real-time updates to clients based on changes in underlying data.
-
 ---
 
 The `QWATCH` command is a novel feature designed to provide real-time updates to clients based on changes in underlying data. It operates similarly to the `SUBSCRIBE` command but focuses on SQL-like queries over data structures. Whenever data modifications affect the query's results, the updated result set is pushed to the subscribed client. This eliminates the need for clients to constantly poll for changes.
@@ -16,13 +15,13 @@ QWATCH dsql-query
 
 ## Parameters
 
-* dsql-query: A SQL-like query specifying the data to be monitored and operation to be performed. The query syntax is as follows:
+- dsql-query: A SQL-like query specifying the data to be monitored and operation to be performed. The query syntax is as follows:
 
-   * `SELECT`: Specifies the fields to be returned, `$key`, `$value`, and `$value.<attr>`.
-   * `WHERE`: Optional clause for filtering results based on conditions.
-   * `LIKE`: Optional clause within WHERE to specify the key pattern and supports the `%` operator from SQL.
-   * `ORDER BY`: Optional clause for sorting results.
-   * `LIMIT`: Optional clause to limit the number of results.
+  - `SELECT`: Specifies the fields to be returned, `$key`, `$value`, and `$value.<attr>`.
+  - `WHERE`: Optional clause for filtering results based on conditions.
+  - `LIKE`: Optional clause within WHERE to specify the key pattern and supports the `%` operator from SQL.
+  - `ORDER BY`: Optional clause for sorting results.
+  - `LIMIT`: Optional clause to limit the number of results.
 
 ## Query Syntax
 
@@ -33,6 +32,7 @@ ORDER BY field [ASC | DESC] LIMIT n
 ```
 
 Special column names:
+
 - `$key`: Refers to the key of the key-value pair
 - `$value`: Refers to the value of the key-value pair
 
@@ -42,6 +42,7 @@ The WHERE clause allows you to filter results based on conditions applied to the
 It also supports the LIKE clause as one of the conditions.
 
 Supported features:
+
 - Comparison operators: `=`, `<`, `>`, `<=`, `>=`, `!=`
 - Logical operators: `AND`, `OR`
 - Parentheses for grouping conditions
@@ -50,7 +51,7 @@ Supported features:
 
 ## Return Value
 
-* A subscription confirmation message similar to `SUBSCRIBE`.
+- A subscription confirmation message similar to `SUBSCRIBE`.
 
 ## Behavior
 
@@ -72,6 +73,7 @@ Let's explore a practical example of using the `QWATCH` command to create a real
 ```
 
 This query does the following:
+
 - Monitors all keys matching the pattern `match:100:*`
 - Filters results to include only scores greater than 10
 - Orders the results by their values in descending order
@@ -88,33 +90,43 @@ that the response will be RESP encoded and parsing will be handled by the SDK th
    QWATCH response: `[] (empty array)`
 
 2. Player 0 scores 5 points:
+
    ```bash
    127.0.0.1:7379> SET match:100:user:0 5
    ```
+
    QWATCH response: `[] (no change, score <= 10)`
 
 3. Player 1 scores 15 points:
+
    ```bash
    127.0.0.1:7379> SET match:100:user:1 15
    ```
+
    QWATCH response: `[["match:100:user:1", "15"]]`
 
 4. Player 2 scores 20 points:
+
    ```bash
    127.0.0.1:7379> SET match:100:user:2 20
    ```
+
    QWATCH response: `[["match:100:user:2", "20"], ["match:100:user:1", "15"]]`
 
 5. Player 3 scores 12 points:
+
    ```bash
    127.0.0.1:7379> SET match:100:user:3 12
    ```
+
    QWATCH response: `[["match:100:user:2", "20"], ["match:100:user:1", "15"], ["match:100:user:3", "12"]]`
 
 6. Player 4 scores 25 points:
+
    ```bash
    127.0.0.1:7379> SET match:100:user:4 25
    ```
+
    QWATCH response: `[["match:100:user:4", "25"], ["match:100:user:2", "20"], ["match:100:user:1", "15"]]`
 
 7. Player 0 improves their score to 30:
@@ -127,10 +139,10 @@ This example demonstrates how `QWATCH` provides real-time updates as the leaderb
 
 ## Error Handling
 
--   `ERR invalid query`: If the provided query is malformed or unsupported.
--   `ERR syntax error`: If the query syntax is incorrect.
--   `ERR unknown command`: If the  `QWATCH`  command is not implemented.
--   `ERR max number of subscriptions reached`: If the maximum number of allowed subscriptions is exceeded.
+- `ERR invalid query`: If the provided query is malformed or unsupported.
+- `ERR syntax error`: If the query syntax is incorrect.
+- `ERR unknown command`: If the `QWATCH` command is not implemented.
+- `ERR max number of subscriptions reached`: If the maximum number of allowed subscriptions is exceeded.
 
 ## Best Practices
 
