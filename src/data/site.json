@@ -15,6 +15,10 @@
       "description": "a drop-in replacement of Redis; if you know Redis, you know DiceDB."
     },
     {
+      "title": "Faster and Efficient Redis",
+      "description": "5x faster than Redis and can handle much larger workloads on a single machine."
+    },
+    {
       "title": "SQL support",
       "description": "fire SQL queries and query your most crucial data at ultra low latency."
     },
