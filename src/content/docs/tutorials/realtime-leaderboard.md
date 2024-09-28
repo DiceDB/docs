@@ -4,10 +4,7 @@ description: "Create a gaming leaderboard in the easiest way possible."
 ---
 
 In the world of gaming, leaderboards are essential for tracking player
-rankings and improving engagement. DiceDB, an in-memory datastore with realtime reactivity,
-is an excellent choice for implementing fast, reliable, and scalable leaderboards.
-In this tutorial, we'll walk through the process of creating a gaming leaderboard
-using DiceDB CLI commands, without relying on any SDK.
+rankings and improving engagement. DiceDB is an in-memory, real-time, and reactive database with Redis and SQL support optimized for modern hardware and building real-time applications. In this tutorial, we'll walk through the process of creating a gaming leaderboard using DiceDB CLI commands, without relying on any SDK.
 
 Prerequisites:
 
