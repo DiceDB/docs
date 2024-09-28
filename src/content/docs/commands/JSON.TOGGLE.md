@@ -151,8 +151,3 @@ JSON.TOGGLE user:1001 $.name
 ```shell
 (error) ERR value at path is not a boolean
 ```
-
-## Conclusion
-
-The `JSON.TOGGLE` command is a powerful tool for toggling boolean values within JSON documents stored in DiceDB. By understanding its parameters, return values, and potential errors, you can effectively use this command to manage your JSON data.
-

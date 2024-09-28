@@ -116,8 +116,3 @@ After executing this command, the JSON document would be:
 ```json
 {}
 ```
-
-## Conclusion
-
-The `JSON.CLEAR` command is a powerful tool for managing JSON data in DiceDB. By understanding its parameters, return values, and behavior, you can effectively use this command to manipulate JSON documents stored in your DiceDB database. Always handle errors appropriately to ensure the robustness of your application.
-

@@ -93,8 +93,3 @@ SETBIT mykey 7 1
 ```
 
 If `mykey` holds a string value that is not a bit string, the `SETBIT` command will raise an error: `WRONGTYPE Operation against a key holding the wrong kind of value`.
-
-## Conclusion
-
-The `SETBIT` command is a powerful tool for manipulating individual bits within a string value in DiceDB. By understanding its parameters, return values, and error handling, you can effectively use this command to perform efficient bitwise operations and implement complex data structures.
-

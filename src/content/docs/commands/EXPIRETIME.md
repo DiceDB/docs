@@ -87,8 +87,3 @@ EXPIRETIME nonExistentKey
 ```
 
 In this example, the key `nonExistentKey` does not exist in the database. The `EXPIRETIME` command returns `-1` indicating that the key does not exist.
-
-## Conclusion
-
-The `EXPIRETIME` command is a useful tool for retrieving the absolute expiration time of a key in DiceDB. By understanding the exact expiration time, you can better manage and debug your DiceDB keys. Always ensure that the key exists and has an expiration time set to get a valid Unix timestamp.
-

@@ -70,8 +70,3 @@ DiceDB> SCARD mystring
 ```
 
 In this example, we first set a string value to the key `mystring`. When we attempt to use the `SCARD` command on this key, DiceDB returns an error because `mystring` is not a set.
-
-## Conclusion
-
-The `SCARD` command is a simple yet powerful tool for determining the size of a set in DiceDB. By understanding its parameters, return values, and potential errors, you can effectively use this command to manage and query your sets.
-

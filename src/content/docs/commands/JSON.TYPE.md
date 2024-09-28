@@ -107,8 +107,3 @@ OK
 127.0.0.1:6379> JSON.TYPE mykey $
 (error) WRONGTYPE Operation against a key holding the wrong kind of value
 ```
-
-## Conclusion
-
-The `JSON.TYPE` command is a useful tool for inspecting the structure of JSON documents stored in DiceDB. By understanding the type of values at specific paths, you can make more informed decisions about how to manipulate and query your JSON data. Always ensure that the key exists and holds a valid JSON document to avoid errors.
-

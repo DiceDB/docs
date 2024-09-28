@@ -107,8 +107,3 @@ JSON.FORGET user:1001 $.nonexistent
 ```sh
 (integer) 0
 ```
-
-## Conclusion
-
-The `JSON.FORGET` command is a powerful tool for manipulating JSON documents in DiceDB. By understanding its parameters, return values, and behavior, you can effectively use this command to manage your JSON data. Always ensure that your JSONPath expressions are valid and that the specified paths exist to avoid errors.
-

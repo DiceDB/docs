@@ -118,8 +118,3 @@ SINTER
 ```shell
 (error) ERR wrong number of arguments for 'sinter' command
 ```
-
-## Conclusion
-
-The `SINTER` command is a powerful tool for finding common elements across multiple sets in DiceDB. Proper understanding of its parameters, return values, and error handling mechanisms ensures effective and error-free usage.
-

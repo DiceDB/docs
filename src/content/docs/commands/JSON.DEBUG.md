@@ -90,8 +90,3 @@ In this example, the `JSON.DEBUG MEMORY` command is used on a non-existent key `
 ```
 
 In this example, the `JSON.DEBUG MEMORY` command is used on an invalid path `$.nonExistentPath` within the JSON data stored under the key `myjson`. DiceDB returns an error indicating that the specified path does not exist.
-
-## Conclusion
-
-The `JSON.DEBUG` command is a powerful tool for developers to gain insights into the internal representation and memory usage of JSON data stored in DiceDB. By understanding the parameters, return values, and potential errors, developers can effectively utilize this command for debugging purposes.
-

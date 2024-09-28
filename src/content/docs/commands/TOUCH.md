@@ -70,8 +70,3 @@ In this example, the `TOUCH` command will raise a `WRONGTYPE` error because `myl
 
 - The `TOUCH` command is useful for cache management and eviction policies, especially in scenarios where you want to prevent certain keys from expiring by marking them as recently accessed.
 - The command does not modify the value of the key, only its last access time.
-
-## Conclusion
-
-The `TOUCH` command is a simple yet powerful tool for managing the lifecycle of keys in DiceDB. By understanding its parameters, return values, and behavior, you can effectively use it to optimize your DiceDB-based applications.
-

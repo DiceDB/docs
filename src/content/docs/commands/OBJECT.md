@@ -107,8 +107,3 @@ OBJECT FREQ mykey
 ```
 
 This response indicates that the access frequency of `mykey` is 5.
-
-## Conclusion
-
-The `OBJECT` command is a powerful tool for inspecting the internal details of DiceDB keys. By using its various subcommands, you can gain insights into the memory usage, reference counts, idle times, and access frequencies of your keys, which can help in optimizing and debugging your DiceDB instance. Always ensure to handle errors appropriately to maintain the robustness of your application.
-

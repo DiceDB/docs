@@ -85,8 +85,3 @@ PTTL nonExistentKey
 ```
 
 In this example, the key `nonExistentKey` does not exist in the DiceDB database. The `PTTL` command returns `-2`, indicating that the key does not exist.
-
-## Conclusion
-
-The `PTTL` command is a useful tool for managing and understanding the lifecycle of keys in a DiceDB database. By providing the remaining TTL in milliseconds, it allows developers to make informed decisions about key expiration and resource management. Proper error handling ensures that the command is used correctly and efficiently.
-

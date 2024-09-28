@@ -135,8 +135,3 @@ JSON.ARRLEN user:1004 $.age
 ```plaintext
 (null)
 ```
-
-## Conclusion
-
-The `JSON.ARRLEN` command is a useful tool for working with JSON arrays in DiceDB. By understanding its parameters, return values, and potential errors, you can effectively utilize this command to manage and query JSON data structures within your DiceDB database.
-

@@ -91,8 +91,3 @@ GETDEL mylist
 
 - The key `mylist` is a list, not a string.
 - The `GETDEL` command raises a `WRONGTYPE` error because it expects the key to be a string.
-
-## Conclusion
-
-The `GETDEL` command is a powerful tool for atomic retrieval and deletion of keys in DiceDB. It ensures that the value is fetched and the key is removed in a single operation, which can be crucial for certain use cases. Proper error handling and understanding of the command's behavior are essential for effective usage.
-

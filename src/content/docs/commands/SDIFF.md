@@ -121,8 +121,3 @@ SDIFF
 ```
 
 In this example, no keys are provided, so DiceDB returns a syntax error.
-
-## Conclusion
-
-The `SDIFF` command is a powerful tool for set operations in DiceDB, allowing you to easily compute the difference between multiple sets. By understanding its parameters, return values, and error handling, you can effectively utilize this command in your DiceDB operations.
-

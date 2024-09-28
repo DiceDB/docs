@@ -81,8 +81,3 @@ OK
 127.0.0.1:6379> PFCOUNT hll_merged
 (integer) 5
 ```
-
-## Conclusion
-
-The `PFMERGE` command is a powerful tool for combining multiple HyperLogLog data structures into one, allowing you to estimate the cardinality of a union of sets efficiently. By understanding its parameters, return values, behavior, and error handling, you can effectively utilize this command in your DiceDB operations.
-
