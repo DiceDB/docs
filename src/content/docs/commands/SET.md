@@ -13,46 +13,23 @@ SET key value [EX seconds | PX milliseconds] [NX | XX] [KEEPTTL]
 
 ## Parameters
 
-1. `key`: The name of the key to be set.
+| Parameter       | Description                                      | Type    | Required |
+|-----------------|--------------------------------------------------|---------|----------|
+| `key`           | The name of the key to be set.                   | String  | Yes      |
+| `value`         | The value to be set for the key.                 | String  | Yes      |
+| `EX`            | Set the specified expire time, in seconds.       | Integer | No       |
+| `PX`            | Set the specified expire time, in milliseconds.  | Integer | No       |
+| `NX`            | Only set the key if it does not already exist.   | None    | No       |
+| `XX`            | Only set the key if it already exists.           | None    | No       |
+| `KEEPTTL`       | Retain the time-to-live associated with the key. | None    | No       |
 
-   - Type: String
-   - Required: Yes
+## Return values
 
-1. `value`: The value to be set for the key.
-
-   - Type: String
-   - Required: Yes
-
-1. `EX seconds`: Set the specified expire time, in seconds.
-
-   - Type: Integer
-   - Required: No
-
-1. `PX milliseconds`: Set the specified expire time, in milliseconds.
-
-   - Type: Integer
-   - Required: No
-
-1. `NX`: Only set the key if it does not already exist.
-
-   - Type: None
-   - Required: No
-
-1. `XX`: Only set the key if it already exists.
-
-   - Type: None
-   - Required: No
-
-1. `KEEPTTL`: Retain the time-to-live associated with the key.
-
-   - Type: None
-   - Required: No
-
-## Return Value
-
-- Returns `OK` if the command is successful.
-- Returns `nil` if the `NX` or `XX` conditions are not met.
-- Returns an error in cases where the syntax or specified constraints are invalid.
+| Condition                                      | Return Value                                      |
+|------------------------------------------------|---------------------------------------------------|
+| Command is successful                          | `OK`                                              |
+| `NX` or `XX` conditions are not met            | `nil`                                             |
+| Syntax or specified constraints are invalid    | error                                             |
 
 ## Behaviour
 
@@ -63,9 +40,7 @@ SET key value [EX seconds | PX milliseconds] [NX | XX] [KEEPTTL]
 - When provided, `EX` sets the expiry time in seconds and `PX` sets the expiry time in milliseconds.
 - The `KEEPTTL` option ensures that the key's existing TTL is retained.
 
-## Error Handling
-
-The command may raise errors in the following scenarios:
+## Errors
 
 1. `Wrong type of value or key`:
 
@@ -86,34 +61,34 @@ The command may raise errors in the following scenarios:
 
 ### Basic Usage
 
-Setting a key `foo` with the value `bar`:
+Setting a key `foo` with the value `bar`
 
 ```bash
 127.0.0.1:7379> SET foo bar
 OK
 ```
 
-### Using Expiration Time (in seconds)
+### Using expiration time (in seconds)
 
-Setting a key `foo` with the value `bar` to expire in 10 seconds:
+Setting a key `foo` with the value `bar` to expire in 10 seconds
 
 ```bash
 127.0.0.1:7379> SET foo bar EX 10
 OK
 ```
 
-### Using Expiration Time (in milliseconds)
+### Using expiration time (in milliseconds)
 
-Setting a key `foo` with the value `bar` to expire in 10000 milliseconds (10 seconds):
+Setting a key `foo` with the value `bar` to expire in 10000 milliseconds (10 seconds)
 
 ```bash
 127.0.0.1:7379> SET foo bar PX 10000
 OK
 ```
 
-### Setting Only if Key Does Not Exist
+### Setting only if key does not exist
 
-Setting a key `foo` only if it does not already exist:
+Setting a key `foo` only if it does not already exist
 
 ```bash
 127.0.0.1:7379> SET foo bar NX
@@ -124,9 +99,9 @@ Setting a key `foo` only if it does not already exist:
 - If the key does not exist: `OK`
 - If the key exists: `nil`
 
-### Setting Only if Key Exists
+### Setting only if key exists
 
-Setting a key `foo` only if it exists:
+Setting a key `foo` only if it exists
 
 ```bash
 127.0.0.1:7379> SET foo bar XX
@@ -137,18 +112,18 @@ Setting a key `foo` only if it exists:
 - If the key exists: `OK`
 - If the key does not exist: `nil`
 
-### Retaining Existing TTL
+### Retaining existing TTL
 
-Setting a key `foo` with a value `bar` and retaining existing TTL:
+Setting a key `foo` with a value `bar` and retaining existing TTL
 
 ```bash
 127.0.0.1:7379> SET foo bar KEEPTTL
 OK
 ```
 
-### Invalid Usage
+### Invalid usage
 
-Trying to set key `foo` with both `EX` and `KEEPTTL` will result in an error:
+Trying to set key `foo` with both `EX` and `KEEPTTL` will result in an error
 
 ```bash
 127.0.0.1:7379> SET foo bar EX 10 KEEPTTL
